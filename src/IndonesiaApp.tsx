@@ -4,26 +4,20 @@ import L from 'leaflet'
 import { useEffect, useState } from 'react'
 
 // Fix for default marker icon in Leaflet + React
-import markerIcon from 'leaflet/dist/images/marker-icon.png'
 import markerShadow from 'leaflet/dist/images/marker-shadow.png'
 
-const DefaultIcon = L.icon({
-    iconUrl: markerIcon,
-    shadowUrl: markerShadow,
-    iconSize: [25, 41],
-    iconAnchor: [12, 41]
-});
-L.Marker.prototype.options.icon = DefaultIcon;
-
-// Custom red icon for higher severity or casualties
-const RedIcon = L.icon({
-    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+const createIcon = (color: string) => new L.Icon({
+    iconUrl: `https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-${color}.png`,
     shadowUrl: markerShadow,
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],
     shadowSize: [41, 41]
 });
+
+const GreenIcon = createIcon('green');   // Severity 1.0
+const GoldIcon = createIcon('gold');     // Severity 1.5
+const RedIcon = createIcon('red');       // Severity 2.0+
 
 interface FloodFeature {
   type: string;
@@ -60,20 +54,44 @@ function App() {
       .catch(error => console.error('Error loading geojson:', error));
   }, []);
 
+  const getIcon = (severity: number) => {
+    if (severity >= 2.0) return RedIcon;
+    if (severity >= 1.5) return GoldIcon;
+    return GreenIcon;
+  };
+
   return (
     <div id="map-wrapper" style={{ height: "100vh", width: "100%" }}>
+      {/* Title and Info Panel */}
       <div style={{ 
         position: "absolute", 
         zIndex: 1000, 
         top: 10, 
         left: 50, 
         background: "rgba(255,255,255,0.9)", 
-        padding: "10px",
-        borderRadius: "5px",
-        boxShadow: "0 2px 5px rgba(0,0,0,0.2)"
+        padding: "15px",
+        borderRadius: "8px",
+        boxShadow: "0 2px 10px rgba(0,0,0,0.2)",
+        maxWidth: "250px"
       }}>
-        <h2 style={{ margin: 0 }}>Indonesia Flood Archive</h2>
-        <p style={{ margin: "5px 0 0" }}>Showing {floodData?.features.length || 0} historic events</p>
+        <h2 style={{ margin: 0, fontSize: "18px" }}>Indonesia Flood Archive</h2>
+        <p style={{ margin: "5px 0 10px", fontSize: "14px" }}>Showing {floodData?.features.length || 0} historic events</p>
+        
+        <div style={{ borderTop: "1px solid #ccc", paddingTop: "10px" }}>
+          <strong style={{ fontSize: "13px" }}>Severity Legend:</strong>
+          <div style={{ display: "flex", alignItems: "center", marginTop: "5px" }}>
+            <span style={{ width: "12px", height: "12px", backgroundColor: "#2fb344", borderRadius: "50%", display: "inline-block", marginRight: "8px" }}></span>
+            <span style={{ fontSize: "12px" }}>1.0 (Minor)</span>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", marginTop: "3px" }}>
+            <span style={{ width: "12px", height: "12px", backgroundColor: "#e8a800", borderRadius: "50%", display: "inline-block", marginRight: "8px" }}></span>
+            <span style={{ fontSize: "12px" }}>1.5 (Moderate)</span>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", marginTop: "3px" }}>
+            <span style={{ width: "12px", height: "12px", backgroundColor: "#cb2b3e", borderRadius: "50%", display: "inline-block", marginRight: "8px" }}></span>
+            <span style={{ fontSize: "12px" }}>2.0 (Major)</span>
+          </div>
+        </div>
       </div>
       
       <MapContainer 
@@ -89,14 +107,13 @@ function App() {
         
         {floodData?.features.map((feature, idx) => {
           const [lng, lat] = feature.geometry.coordinates;
-          // Simple validation to prevent rendering markers far outside Indonesia (like the outlier found earlier)
           if (lng < 90 || lng > 150 || lat < -15 || lat > 15) return null;
 
           return (
             <Marker 
               key={idx} 
               position={[lat, lng]}
-              icon={feature.properties.dead > 50 ? RedIcon : DefaultIcon}
+              icon={getIcon(feature.properties.severity)}
             >
               <Popup>
                 <div style={{ fontSize: "14px" }}>
