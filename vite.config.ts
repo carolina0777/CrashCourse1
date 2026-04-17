@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         indonesia: resolve(__dirname, 'indonesia.html'),
+        dashboard: resolve(__dirname, 'dashboard.html'),
       },
     },
   },
