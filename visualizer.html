@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Map Visualizer</title>
+    <!-- Leaflet for the map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- PapaParse for CSV parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <style>
+        body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; font-family: sans-serif; }
+        #map { height: 100%; width: 100%; background: #f0f0f0; }
+        
+        #drop-zone {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(52, 152, 219, 0.3);
+            border: 5px dashed #3498db;
+            z-index: 10000;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+        }
+        #drop-zone.active { display: flex; }
+        #drop-text { background: white; padding: 20px; border-radius: 10px; font-size: 24px; color: #2980b9; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+
+        #controls {
+            position: absolute;
+            top: 20px; left: 50px;
+            z-index: 1000;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            max-width: 300px;
+        }
+        #controls h1 { margin: 0 0 10px 0; font-size: 18px; }
+        #status { font-size: 14px; color: #666; }
+        .hint { font-size: 12px; color: #888; margin-top: 10px; font-style: italic; }
+    </style>
+</head>
+<body>
+
+    <div id="drop-zone">
+        <div id="drop-text">Drop CSV file to Map</div>
+    </div>
+
+    <div id="controls">
+        <h1>Local CSV Visualizer</h1>
+        <div id="status">Drag and drop a CSV file anywhere on the map to visualize.</div>
+        <div class="hint">Supports columns: anonymous_lat, lat, latitude, anonymous_long, long, longitude, etc.</div>
+    </div>
+
+    <div id="map"></div>
+
+    <script>
+        // Initialize Map
+        const map = L.map('map').setView([0, 0], 2);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const markers = L.featureGroup().addTo(map);
+
+        // Drag and Drop Handlers
+        window.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            document.getElementById('drop-zone').classList.add('active');
+        });
+
+        window.addEventListener('dragleave', () => {
+            document.getElementById('drop-zone').classList.remove('active');
+        });
+
+        window.addEventListener('drop', (e) => {
+            e.preventDefault();
+            document.getElementById('drop-zone').classList.remove('active');
+            
+            const file = e.dataTransfer.files[0];
+            if (file && file.name.endsWith('.csv')) {
+                parseFile(file);
+            } else {
+                alert("Please drop a valid CSV file.");
+            }
+        });
+
+        function parseFile(file) {
+            document.getElementById('status').innerText = "Loading " + file.name + "...";
+            
+            Papa.parse(file, {
+                header: true,
+                dynamicTyping: true,
+                skipEmptyLines: true,
+                complete: function(results) {
+                    visualizeData(results.data, file.name);
+                }
+            });
+        }
+
+        function visualizeData(data, filename) {
+            markers.clearLayers();
+            
+            if (data.length === 0) {
+                alert("The CSV file seems to be empty.");
+                return;
+            }
+
+            // Find Coordinate Columns
+            const headers = Object.keys(data[0]);
+            const latCol = headers.find(h => /^(lat|latitude|anonymous_lat|y)$/i.test(h.trim()));
+            const lonCol = headers.find(h => /^(lon|long|longitude|anonymous_long|x)$/i.test(h.trim()));
+
+            if (!latCol || !lonCol) {
+                alert("Could not find latitude/longitude columns.\nLooked for: lat, long, anonymous_lat, anonymous_long, etc.");
+                document.getElementById('status').innerText = "Error: Missing coordinates in " + filename;
+                return;
+            }
+
+            let count = 0;
+            data.forEach(row => {
+                const lat = parseFloat(row[latCol]);
+                const lon = parseFloat(row[lonCol]);
+
+                if (!isNaN(lat) && !isNaN(lon)) {
+                    // Create Popup Content from all fields
+                    let popupContent = "<div style='max-height:200px; overflow-y:auto;'><strong>Details:</strong><hr>";
+                    for (let key in row) {
+                        popupContent += `<b>${key}:</b> ${row[key]}<br>`;
+                    }
+                    popupContent += "</div>";
+
+                    L.circleMarker([lat, lon], {
+                        radius: 6,
+                        fillColor: "#3498db",
+                        color: "#fff",
+                        weight: 1,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    }).bindPopup(popupContent).addTo(markers);
+                    count++;
+                }
+            });
+
+            if (count > 0) {
+                map.fitBounds(markers.getBounds());
+                document.getElementById('status').innerText = `Successfully loaded ${count} points from ${filename}`;
+            } else {
+                document.getElementById('status').innerText = "Found coordinate columns but no valid data points.";
+            }
+        }
+    </script>
+</body>
+</html>
