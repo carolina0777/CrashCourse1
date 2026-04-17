@@ -12,6 +12,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         indonesia: resolve(__dirname, 'indonesia.html'),
         dashboard: resolve(__dirname, 'dashboard.html'),
+        visualizer: resolve(__dirname, 'visualizer.html'),
       },
     },
   },
