@@ -46,7 +46,6 @@
         // 7. Initialize Layer Groups (containers for our filters)
         const primaryGroup = L.layerGroup().addTo(map);
         const secondaryGroup = L.layerGroup().addTo(map);
-        const otherGroup = L.layerGroup().addTo(map);
 
         // 8. Load your filtered GeoJSON data
         fetch('schools_filtered.geojson')
@@ -69,38 +68,37 @@
                             </div>
                         `);
 
-                        // Add the school to the correct filter group
+                        // Add only Primary or Secondary schools to their groups
                         if (cat === "Primary" || cat === "Pre Primary") {
                             primaryGroup.addLayer(layer);
                         } else if (cat === "Secondary") {
                             secondaryGroup.addLayer(layer);
-                        } else {
-                            otherGroup.addLayer(layer);
                         }
+                        // Other institutions are simply ignored
                     },
                     pointToLayer: function (feature, latlng) {
-                        // Change color based on category
                         const cat = feature.properties.category;
-                        let color = "#0078ff"; // Default Blue
-                        if (cat === "Secondary") color = "#ff7800"; // Orange
-                        if (cat === "Primary") color = "#228b22"; // Green
+                        let color = "#228b22"; // Green for Primary
+                        if (cat === "Secondary") color = "#ff7800"; // Orange for Secondary
 
-                        return L.circleMarker(latlng, {
-                            radius: 4,
-                            fillColor: color,
-                            color: "#000",
-                            weight: 1,
-                            opacity: 1,
-                            fillOpacity: 0.8
-                        });
+                        // Return the marker only for Primary or Secondary
+                        if (cat === "Primary" || cat === "Pre Primary" || cat === "Secondary") {
+                            return L.circleMarker(latlng, {
+                                radius: 4,
+                                fillColor: color,
+                                color: "#000",
+                                weight: 1,
+                                opacity: 1,
+                                fillOpacity: 0.8
+                            });
+                        }
                     }
                 });
 
-                // 9. Add the Filter Control to the top-right
+                // 9. Add the Filter Control (excluding 'Others')
                 const overlays = {
                     "Primary Schools": primaryGroup,
-                    "Secondary Schools": secondaryGroup,
-                    "Other Institutions": otherGroup
+                    "Secondary Schools": secondaryGroup
                 };
                 L.control.layers(null, overlays, { collapsed: false }).addTo(map);
 
