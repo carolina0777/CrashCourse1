@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northern Nigeria Schools Map</title>
+    
+    <!-- 1. Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        /* 2. Set the size of the map container */
+        #map {
+            height: 100vh; /* full height of the screen */
+            width: 100%;
+        }
+        body { margin: 0; padding: 0; font-family: sans-serif; }
+    </style>
+</head>
+<body>
+
+    <!-- 3. The div where the map will appear -->
+    <div id="map"></div>
+
+    <!-- 4. Include Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        // 5. Initialize the map
+        // We center it on the Maiduguri area [Latitude, Longitude] and zoom level 7
+        const map = L.map('map').setView([11.83, 13.15], 7);
+
+        // 6. Add a background (Tile Layer)
+        // We use OpenStreetMap tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 7. Load your filtered GeoJSON data
+        // We use 'fetch' to get the file from the public folder
+        fetch('schools_filtered.geojson')
+            .then(response => response.json())
+            .then(data => {
+                // 8. Add the data to the map
+                L.geoJSON(data, {
+                    // This function runs for every school point
+                    onEachFeature: function (feature, layer) {
+                        // Create a popup showing the school's name and some info
+                        const name = feature.properties.name || "Unknown School";
+                        const cat = feature.properties.category || "N/A";
+                        const lga = feature.properties.lganame || "N/A";
+                        const state = feature.properties.statename || "N/A";
+                        
+                        layer.bindPopup(`
+                            <div style="font-size: 14px;">
+                                <strong>${name}</strong><br>
+                                <hr>
+                                <b>Type:</b> ${cat}<br>
+                                <b>LGA:</b> ${lga}<br>
+                                <b>State:</b> ${state}
+                            </div>
+                        `);
+                    },
+                    // Optional: Make the markers blue dots instead of default pins for better performance
+                    pointToLayer: function (feature, latlng) {
+                        return L.circleMarker(latlng, {
+                            radius: 4,
+                            fillColor: "#0078ff",
+                            color: "#000",
+                            weight: 1,
+                            opacity: 1,
+                            fillOpacity: 0.8
+                        });
+                    }
+                }).addTo(map);
+            })
+            .catch(error => {
+                console.error('Error loading the schools data:', error);
+                alert('Could not load schools_filtered.geojson. Make sure the file exists in the public/ folder.');
+            });
+    </script>
+</body>
+</html>
