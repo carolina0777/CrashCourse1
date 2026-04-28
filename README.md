@@ -1,18 +1,18 @@
-# Flood Mapping Project
+# Northern Nigeria Education Mapping
 
-This project contains interactive maps built with React and Leaflet, visualizing historic flood data.
+This project visualizes the distribution of primary and secondary schools across Northern Nigeria, specifically focusing on the states of **Kano, Borno, and Adamawa**.
 
-## 📍 Live Maps
+## 📍 Live Map
+*   **Nigeria Schools Map:** [https://carolina0777.github.io/CrashCourse1/](https://carolina0777.github.io/CrashCourse1/)
 
-*   **London Map (Default):** [https://carolina0777.github.io/CrashCourse1/](https://carolina0777.github.io/CrashCourse1/)
-*   **Indonesia Flood Archive:** [https://carolina0777.github.io/CrashCourse1/indonesia.html](https://carolina0777.github.io/CrashCourse1/indonesia.html)
-*   **Flood Data Dashboard (Charts):** [https://carolina0777.github.io/CrashCourse1/dashboard.html](https://carolina0777.github.io/CrashCourse1/dashboard.html)
-*   **Local CSV Visualizer (Drag & Drop):** [https://carolina0777.github.io/CrashCourse1/visualizer.html](https://carolina0777.github.io/CrashCourse1/visualizer.html)
+## 📊 Project Details
+- **Data Source:** [GRID3 (Nigeria Schools)](https://data.grid3.org/datasets/grid3-nigeria-schools)
+- **Coverage:** Kano, Borno, and Adamawa States.
+- **Functionality:** An interactive Leaflet map using circle markers for performance, with popups detailing school names, types, and administrative boundaries.
 
-## 📊 Data Sources
-The Indonesia flood data is extracted from the `flood_archive.xlsx` dataset, containing 225 historic events with details on dates, causes, and severity.
+## 🛠 Tools & Scripts
+- `filter_geojson.cjs`: A reusable Node.js script used to filter large national GeoJSON datasets into specific regions using a geographic bounding box.
+- **Mapping:** Built with Leaflet.js.
 
-## 🛠 Tech Stack
-*   **Frontend:** React, TypeScript, Vite
-*   **Mapping:** Leaflet, React-Leaflet
-*   **Data Processing:** Python (Pandas)
+---
+*Note: This repository has been transitioned to focus on Nigerian educational infrastructure mapping.*
