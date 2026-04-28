@@ -3,113 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northern Nigeria Schools Map v3</title>
+    <title>Northern Nigeria Schools & Population Map v4</title>
     
     <!-- 1. Include Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     
     <style>
-        /* 2. Set the size of the map container */
-        #map {
-            height: 100vh; /* full height of the screen */
-            width: 100%;
-        }
+        #map { height: 100vh; width: 100%; }
         body { margin: 0; padding: 0; font-family: sans-serif; }
+        .legend {
+            padding: 6px 8px;
+            font: 14px Arial, Helvetica, sans-serif;
+            background: white;
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            line-height: 24px;
+        }
     </style>
 </head>
 <body>
 
-    <!-- 3. The div where the map will appear -->
     <div id="map"></div>
 
-    <!-- 4. Include Leaflet JavaScript -->
+    <!-- 2. Include Leaflet and Heatmap Plugin -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
 
     <script>
-        // 5. Initialize the map with strict boundaries
+        // 3. Initialize the map with strict boundaries
         const latMin = 10.0, latMax = 13.5;
         const lonMin = 11.0, lonMax = 14.5;
         const areaBounds = L.latLngBounds([latMin, lonMin], [latMax, lonMax]);
 
         const map = L.map('map', {
-            minZoom: 8,            // Higher number = more zoomed in
+            minZoom: 8,
             maxZoom: 18,
-            maxBounds: areaBounds, // Set the area you can't leave
-            maxBoundsViscosity: 1.0 // 1.0 means "hard edge" - no dragging past the line
+            maxBounds: areaBounds,
+            maxBoundsViscosity: 1.0
         }).setView([11.83, 12.75], 8);
 
-        // 6. Add a background (Tile Layer)
+        // 4. Background Tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // 7. Initialize Layer Groups (containers for our filters)
+        // 5. Initialize Layer Groups
         const primaryGroup = L.layerGroup().addTo(map);
         const secondaryGroup = L.layerGroup().addTo(map);
+        const heatGroup = L.layerGroup().addTo(map);
 
-        // 8. Load your filtered GeoJSON data
+        // 6. Load Schools Data
         fetch('schools_filtered.geojson')
             .then(response => response.json())
             .then(data => {
                 L.geoJSON(data, {
-                    // Filter: Only allow Primary and Secondary to be processed
-                    filter: function(feature) {
+                    filter: (feature) => {
                         const cat = feature.properties.category;
                         return (cat === "Primary" || cat === "Pre Primary" || cat === "Secondary");
                     },
-                    onEachFeature: function (feature, layer) {
+                    onEachFeature: (feature, layer) => {
                         const name = feature.properties.name || "Unknown School";
                         const cat = feature.properties.category || "N/A";
-                        const lga = feature.properties.lganame || "N/A";
-                        const state = feature.properties.statename || "N/A";
+                        layer.bindPopup(`<strong>${name}</strong><br>Type: ${cat}`);
                         
-                        layer.bindPopup(`
-                            <div style="font-size: 14px;">
-                                <strong>${name}</strong><br>
-                                <hr>
-                                <b>Type:</b> ${cat}<br>
-                                <b>LGA:</b> ${lga}<br>
-                                <b>State:</b> ${state}
-                            </div>
-                        `);
-
-                        // Add to correct group
-                        if (cat === "Primary" || cat === "Pre Primary") {
-                            primaryGroup.addLayer(layer);
-                        } else if (cat === "Secondary") {
-                            secondaryGroup.addLayer(layer);
-                        }
+                        if (cat === "Primary" || cat === "Pre Primary") primaryGroup.addLayer(layer);
+                        else if (cat === "Secondary") secondaryGroup.addLayer(layer);
                     },
-                    pointToLayer: function (feature, latlng) {
+                    pointToLayer: (feature, latlng) => {
                         const cat = feature.properties.category;
-                        let color = "#228b22"; // Green for Primary
-                        if (cat === "Secondary") color = "#ff7800"; // Orange for Secondary
-
+                        const color = (cat === "Secondary") ? "#ff7800" : "#228b22";
                         return L.circleMarker(latlng, {
-                            radius: 4,
-                            fillColor: color,
-                            color: "#000",
-                            weight: 1,
-                            opacity: 1,
-                            fillOpacity: 0.8
+                            radius: 4, fillColor: color, color: "#000", weight: 1, opacity: 1, fillOpacity: 0.8
                         });
                     }
                 });
-
-                // 9. Add the Filter Control
-                const overlays = {
-                    "Primary Schools": primaryGroup,
-                    "Secondary Schools": secondaryGroup
-                };
-                L.control.layers(null, overlays, { collapsed: false }).addTo(map);
-
-                // 10. Automatically zoom to fit the area
-                map.fitBounds(areaBounds);
-            })
-            .catch(error => {
-                console.error('Error loading the schools data:', error);
-                alert('Could not load schools_filtered.geojson. Make sure the file exists in the public/ folder.');
             });
+
+        // 7. Load Populated Places and create Heatmap
+        fetch('populated_places_filtered.geojson')
+            .then(response => response.json())
+            .then(data => {
+                const heatPoints = data.features.map(feature => {
+                    return [feature.geometry.coordinates[1], feature.geometry.coordinates[0], 0.5]; // [lat, lon, intensity]
+                });
+
+                const heat = L.heatLayer(heatPoints, {
+                    radius: 20,
+                    blur: 15,
+                    maxZoom: 10,
+                    gradient: {0.4: 'blue', 0.6: 'cyan', 0.7: 'lime', 0.8: 'yellow', 1: 'red'}
+                }).addTo(heatGroup);
+            });
+
+        // 8. Layer Controls
+        const overlays = {
+            "<span style='color: #d32f2f; font-weight: bold;'>Settlement Density (Heatmap)</span>": heatGroup,
+            "Primary Schools": primaryGroup,
+            "Secondary Schools": secondaryGroup
+        };
+        L.control.layers(null, overlays, { collapsed: false }).addTo(map);
+
+        map.fitBounds(areaBounds);
     </script>
 </body>
 </html>
