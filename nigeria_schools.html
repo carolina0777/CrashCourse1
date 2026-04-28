@@ -43,11 +43,16 @@
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        // 7. Load your filtered GeoJSON data
+        // 7. Initialize Layer Groups (containers for our filters)
+        const primaryGroup = L.layerGroup().addTo(map);
+        const secondaryGroup = L.layerGroup().addTo(map);
+        const otherGroup = L.layerGroup().addTo(map);
+
+        // 8. Load your filtered GeoJSON data
         fetch('schools_filtered.geojson')
             .then(response => response.json())
             .then(data => {
-                const schoolsLayer = L.geoJSON(data, {
+                L.geoJSON(data, {
                     onEachFeature: function (feature, layer) {
                         const name = feature.properties.name || "Unknown School";
                         const cat = feature.properties.category || "N/A";
@@ -63,21 +68,44 @@
                                 <b>State:</b> ${state}
                             </div>
                         `);
+
+                        // Add the school to the correct filter group
+                        if (cat === "Primary" || cat === "Pre Primary") {
+                            primaryGroup.addLayer(layer);
+                        } else if (cat === "Secondary") {
+                            secondaryGroup.addLayer(layer);
+                        } else {
+                            otherGroup.addLayer(layer);
+                        }
                     },
                     pointToLayer: function (feature, latlng) {
+                        // Change color based on category
+                        const cat = feature.properties.category;
+                        let color = "#0078ff"; // Default Blue
+                        if (cat === "Secondary") color = "#ff7800"; // Orange
+                        if (cat === "Primary") color = "#228b22"; // Green
+
                         return L.circleMarker(latlng, {
                             radius: 4,
-                            fillColor: "#0078ff",
+                            fillColor: color,
                             color: "#000",
                             weight: 1,
                             opacity: 1,
                             fillOpacity: 0.8
                         });
                     }
-                }).addTo(map);
+                });
 
-                // 8. Automatically zoom to fit the data within our strict area
-                map.fitBounds(schoolsLayer.getBounds(), { padding: [20, 20] });
+                // 9. Add the Filter Control to the top-right
+                const overlays = {
+                    "Primary Schools": primaryGroup,
+                    "Secondary Schools": secondaryGroup,
+                    "Other Institutions": otherGroup
+                };
+                L.control.layers(null, overlays, { collapsed: false }).addTo(map);
+
+                // 10. Automatically zoom to fit the area
+                map.fitBounds(areaBounds);
             })
             .catch(error => {
                 console.error('Error loading the schools data:', error);
