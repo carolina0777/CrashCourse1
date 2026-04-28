@@ -26,11 +26,17 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
     <script>
-        // 5. Initialize the map with restrictions
+        // 5. Initialize the map with strict boundaries
+        const latMin = 10.0, latMax = 13.5;
+        const lonMin = 11.0, lonMax = 14.5;
+        const areaBounds = L.latLngBounds([latMin, lonMin], [latMax, lonMax]);
+
         const map = L.map('map', {
-            minZoom: 7,
-            maxZoom: 18
-        }).setView([11.83, 13.15], 7);
+            minZoom: 8,            // Higher number = more zoomed in
+            maxZoom: 18,
+            maxBounds: areaBounds, // Set the area you can't leave
+            maxBoundsViscosity: 1.0 // 1.0 means "hard edge" - no dragging past the line
+        }).setView([11.83, 12.75], 8);
 
         // 6. Add a background (Tile Layer)
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -70,14 +76,8 @@
                     }
                 }).addTo(map);
 
-                // 8. CRITICAL: Get the bounds of the schools
-                const bounds = schoolsLayer.getBounds();
-
-                // 9. Zoom to fit the data perfectly
-                map.fitBounds(bounds, { padding: [10, 10] });
-
-                // 10. Lock the map so you can't pan away from this specific region
-                map.setMaxBounds(bounds);
+                // 8. Automatically zoom to fit the data within our strict area
+                map.fitBounds(schoolsLayer.getBounds(), { padding: [20, 20] });
             })
             .catch(error => {
                 console.error('Error loading the schools data:', error);
