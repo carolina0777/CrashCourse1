@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EBI Decision-Support Map: North East Nigeria v7</title>
+    <title>EBI Decision-Support Map: North East Nigeria v8</title>
     
     <!-- 1. Include Leaflet CSS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -72,15 +72,15 @@
                 }).addTo(map);
             });
 
-        // 7. Load Road Network Data
-        fetch('roads_filtered.geojson')
+        // 7. Load Road Network Data (Lines)
+        fetch('roads_lines_filtered.geojson')
             .then(response => response.json())
             .then(data => {
                 L.geoJSON(data, {
                     style: {
-                        color: "#555",    // Dark grey
-                        weight: 1.5,      // Thin lines
-                        opacity: 0.6
+                        color: "#666",    // Medium grey for roads
+                        weight: 1.2,      // Thin centerlines
+                        opacity: 0.7
                     }
                 }).addTo(roadsGroup);
             });
