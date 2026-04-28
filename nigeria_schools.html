@@ -42,7 +42,7 @@
             .then(response => response.json())
             .then(data => {
                 // 8. Add the data to the map
-                L.geoJSON(data, {
+                const schoolsLayer = L.geoJSON(data, {
                     // This function runs for every school point
                     onEachFeature: function (feature, layer) {
                         // Create a popup showing the school's name and some info
@@ -73,6 +73,11 @@
                         });
                     }
                 }).addTo(map);
+
+                // 9. Automatically zoom and center the map to fit the data
+                map.fitBounds(schoolsLayer.getBounds(), {
+                    padding: [20, 20] // Adds a small margin around the points
+                });
             })
             .catch(error => {
                 console.error('Error loading the schools data:', error);
