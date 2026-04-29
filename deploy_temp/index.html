@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBI Decision-Support Map: North East Nigeria v7</title>
+    
+    <!-- 1. Include Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <style>
+        #map { height: 100vh; width: 100%; }
+        body { margin: 0; padding: 0; font-family: sans-serif; }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+
+    <!-- 2. Include Leaflet and Heatmap Plugin -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+    <script>
+        // 3. Initialize the map with strict boundaries
+        const latMin = 10.0, latMax = 13.5;
+        const lonMin = 11.0, lonMax = 14.5;
+        const areaBounds = L.latLngBounds([latMin, lonMin], [latMax, lonMax]);
+
+        const map = L.map('map', {
+            minZoom: 8,
+            maxZoom: 18,
+            maxBounds: areaBounds,
+            maxBoundsViscosity: 1.0
+        }).setView([11.83, 12.75], 8);
+
+        // 4. Background Tiles
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // 5. Initialize Layer Groups
+        const primaryGroup = L.layerGroup().addTo(map);
+        const secondaryGroup = L.layerGroup().addTo(map);
+        const heatGroup = L.layerGroup().addTo(map);
+        const roadsGroup = L.layerGroup().addTo(map); // New group for roads
+
+        // 6. Load Schools Data
+        fetch('schools_filtered.geojson')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    filter: (feature) => {
+                        const cat = feature.properties.category;
+                        return (cat === "Primary" || cat === "Pre Primary" || cat === "Secondary");
+                    },
+                    onEachFeature: (feature, layer) => {
+                        const name = feature.properties.name || "Unknown School";
+                        const cat = feature.properties.category || "N/A";
+                        layer.bindPopup(`<strong>${name}</strong><br>Type: ${cat}`);
+                        
+                        if (cat === "Primary" || cat === "Pre Primary") primaryGroup.addLayer(layer);
+                        else if (cat === "Secondary") secondaryGroup.addLayer(layer);
+                    },
+                    pointToLayer: (feature, latlng) => {
+                        const cat = feature.properties.category;
+                        const color = (cat === "Secondary") ? "#ff7800" : "#228b22";
+                        return L.circleMarker(latlng, {
+                            radius: 4, fillColor: color, color: "#000", weight: 1, opacity: 1, fillOpacity: 0.8
+                        });
+                    }
+                }).addTo(map);
+            });
+
+        // 7. Load Road Network Data
+        fetch('roads_filtered.geojson')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    style: {
+                        color: "#555",    // Dark grey
+                        weight: 1.5,      // Thin lines
+                        opacity: 0.6
+                    }
+                }).addTo(roadsGroup);
+            });
+
+        // 8. Load Populated Places and create Heatmap
+        fetch('populated_places_filtered.geojson')
+            .then(response => response.json())
+            .then(data => {
+                const heatPoints = data.features.map(feature => {
+                    return [feature.geometry.coordinates[1], feature.geometry.coordinates[0], 0.5];
+                });
+
+                L.heatLayer(heatPoints, {
+                    radius: 25,
+                    blur: 25,
+                    minOpacity: 0.4,
+                    gradient: {
+                        0.4: '#abd9e9',
+                        0.7: '#fee090',
+                        1.0: '#f46d43'
+                    }
+                }).addTo(heatGroup);
+            });
+
+        // 9. Layer Controls
+        const overlays = {
+            "<b>Schools</b>": {
+                "Primary Schools": primaryGroup,
+                "Secondary Schools": secondaryGroup
+            },
+            "<b>Infrastructure & Context</b>": {
+                "Road Network": roadsGroup,
+                "Settlement Density": heatGroup
+            }
+        };
+
+        // Standard Leaflet Layer Control
+        const baseMaps = {};
+        L.control.layers(baseMaps, {
+            "Primary Schools": primaryGroup,
+            "Secondary Schools": secondaryGroup,
+            "Road Network": roadsGroup,
+            "Settlement Density": heatGroup
+        }, { collapsed: false }).addTo(map);
+
+        map.fitBounds(areaBounds);
+    </script>
+</body>
+</html>
