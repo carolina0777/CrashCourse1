@@ -1,0 +1,3615 @@
+{
+  "type": "FeatureCollection",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1080,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.615869210096,
+          12.6717194997552
+        ]
+      },
+      "properties": {
+        "FID": 1080,
+        "globalid": "6a7cc8bc-7671-4d8d-9643-22596bfac014",
+        "uniq_id": 843757,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Aggregate",
+        "category": "Mixed",
+        "name": "Central Primary Junior Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1081,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.60578394917,
+          12.6729968383335
+        ]
+      },
+      "properties": {
+        "FID": 1081,
+        "globalid": "6f10ea59-536c-4afa-8ad3-ef7f3b1cbb93",
+        "uniq_id": 843758,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Aggregate",
+        "category": "Mixed",
+        "name": "Charamari Primary Junior and Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40632,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4242466399705,
+          13.3569596081994
+        ]
+      },
+      "properties": {
+        "FID": 40632,
+        "globalid": "31f9dd7d-a4d8-4169-89d6-5b7a4297a503",
+        "uniq_id": 883371,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Arege",
+        "wardcode": "10101",
+        "lganame": "Abadam",
+        "lgacode": "101",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Primary School Metele",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40734,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1912312213439,
+          12.824670536616
+        ]
+      },
+      "properties": {
+        "FID": 40734,
+        "globalid": "dedeb2d0-1559-4d2b-b297-c2315e18b214",
+        "uniq_id": 883474,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Aduwa",
+        "wardcode": "11001",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Aduwa Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40735,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4575577830653,
+          12.7243605261174
+        ]
+      },
+      "properties": {
+        "FID": 40735,
+        "globalid": "30071d21-68c7-42a6-9105-7680e46e10b3",
+        "uniq_id": 883475,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Wamiri",
+        "wardcode": "11008",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Awamiri Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40736,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3631494628775,
+          12.6786426202607
+        ]
+      },
+      "properties": {
+        "FID": 40736,
+        "globalid": "03b52af4-d55f-49de-b6c6-00061a21f605",
+        "uniq_id": 883476,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Guzamala East",
+        "wardcode": "11003",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Primary School Bulamari Bukar Lumru",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40737,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2783300560873,
+          12.6604300331196
+        ]
+      },
+      "properties": {
+        "FID": 40737,
+        "globalid": "d1124d69-159f-45ce-9691-42e8faf467e1",
+        "uniq_id": 883477,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Guzamala West",
+        "wardcode": "11004",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Guzamala Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40738,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0456582306429,
+          12.8556779277942
+        ]
+      },
+      "properties": {
+        "FID": 40738,
+        "globalid": "3a6d64e9-73ea-4815-93e8-9082ec2be13e",
+        "uniq_id": 883478,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Moduri",
+        "wardcode": "11009",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Primary School Maduri Pompoma",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40856,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7546010301135,
+          13.365798611117
+        ]
+      },
+      "properties": {
+        "FID": 40856,
+        "globalid": "33e7c3ed-8317-439f-a228-4e0d203f0818",
+        "uniq_id": 883596,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Doro",
+        "wardcode": "11706",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Primary School Kuwaram M Leda",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40857,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7524924409734,
+          13.1589148147669
+        ]
+      },
+      "properties": {
+        "FID": 40857,
+        "globalid": "7270ed3d-266f-4674-9fec-6447f63671bd",
+        "uniq_id": 883597,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Primary School Kwatan",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40858,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.684857088284,
+          13.3585493388809
+        ]
+      },
+      "properties": {
+        "FID": 40858,
+        "globalid": "0472a310-b554-4a19-b6da-ac2e3635fa90",
+        "uniq_id": 883598,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Doro",
+        "wardcode": "11706",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Primary School Shuwaram",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40918,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8493001676687,
+          12.5310575700508
+        ]
+      },
+      "properties": {
+        "FID": 40918,
+        "globalid": "52dad3fe-d31b-407b-9077-0c2addd0c1d0",
+        "uniq_id": 883658,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Badairi",
+        "wardcode": "12103",
+        "lganame": "Marte",
+        "lgacode": "121",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Badairi Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40919,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8627718932083,
+          12.5281789813749
+        ]
+      },
+      "properties": {
+        "FID": 40919,
+        "globalid": "3aa0086a-060d-450f-a5ae-29ef493c775e",
+        "uniq_id": 883659,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Badairi",
+        "wardcode": "12103",
+        "lganame": "Marte",
+        "lgacode": "121",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Badairi Barka Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40929,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0522012210096,
+          12.7408837961503
+        ]
+      },
+      "properties": {
+        "FID": 40929,
+        "globalid": "895364d0-c013-4e3a-8586-bdab49f3512a",
+        "uniq_id": 883669,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Mintar",
+        "wardcode": "12305",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kusuma Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40941,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7481818591056,
+          12.607646539756
+        ]
+      },
+      "properties": {
+        "FID": 40941,
+        "globalid": "a3deb766-a54e-42bf-82e5-51944796c049",
+        "uniq_id": 883681,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Mintar",
+        "wardcode": "12305",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Diffinoa Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40942,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7359029232813,
+          12.6392854978275
+        ]
+      },
+      "properties": {
+        "FID": 40942,
+        "globalid": "789d0de7-6da8-452a-96d3-b5a567c4e4fa",
+        "uniq_id": 883682,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Ngurno",
+        "wardcode": "12308",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Fannamiri Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40944,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6888060140863,
+          12.7160686113774
+        ]
+      },
+      "properties": {
+        "FID": 40944,
+        "globalid": "95cc3074-3c65-43e2-9d18-5e49044a1934",
+        "uniq_id": 883684,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Ngurno",
+        "wardcode": "12308",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Ngurno Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40956,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1179500001924,
+          12.7938799998622
+        ]
+      },
+      "properties": {
+        "FID": 40956,
+        "globalid": "0583edc1-37d0-44b2-974e-71ebaa638572",
+        "uniq_id": 883696,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Mintar",
+        "wardcode": "12305",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kerta Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40964,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1312399997262,
+          12.5818399999161
+        ]
+      },
+      "properties": {
+        "FID": 40964,
+        "globalid": "a9f076a6-faa1-4d5b-98b1-36c0fc613b9f",
+        "uniq_id": 883704,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Wulgo",
+        "wardcode": "12510",
+        "lganame": "Ngala",
+        "lgacode": "125",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Zannari Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40965,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2187130686532,
+          12.7008399783824
+        ]
+      },
+      "properties": {
+        "FID": 40965,
+        "globalid": "32c71649-f084-48df-b8b2-56beb3a10729",
+        "uniq_id": 883705,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Badu",
+        "wardcode": "12602",
+        "lganame": "Nganzai",
+        "lgacode": "126",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Badu Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40967,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3160330905548,
+          12.600735509736
+        ]
+      },
+      "properties": {
+        "FID": 40967,
+        "globalid": "cb676e21-abfb-4827-a374-7a764b222a1a",
+        "uniq_id": 883707,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Jigalta",
+        "wardcode": "12606",
+        "lganame": "Nganzai",
+        "lgacode": "126",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Jahauta Primary School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42773,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3540588602283,
+          12.6858025799252
+        ]
+      },
+      "properties": {
+        "FID": 42773,
+        "globalid": "62f593af-7187-4d46-922b-976145d50c3f",
+        "uniq_id": 885513,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Guzamala East",
+        "wardcode": "11003",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Goni Adamti Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42774,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2440728783607,
+          12.6831041902063
+        ]
+      },
+      "properties": {
+        "FID": 42774,
+        "globalid": "54d05025-69da-46ad-abdf-53ba68ffb68a",
+        "uniq_id": 885514,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Guzamala West",
+        "wardcode": "11004",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Zannari Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42775,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2776175538071,
+          12.6642594444179
+        ]
+      },
+      "properties": {
+        "FID": 42775,
+        "globalid": "80dcdbce-2f76-45ac-ab1c-eb92d21e91a1",
+        "uniq_id": 885515,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Guzamala West",
+        "wardcode": "11004",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Integrated",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Guzamala Lawanti Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42776,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4420199109902,
+          12.6837859122901
+        ]
+      },
+      "properties": {
+        "FID": 42776,
+        "globalid": "66ae915c-10cc-4874-9ecb-6fee96796c4a",
+        "uniq_id": 885516,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Mairari",
+        "wardcode": "11006",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Mairari Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42777,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1784063601654,
+          12.937147020019
+        ]
+      },
+      "properties": {
+        "FID": 42777,
+        "globalid": "48f81d22-f56a-459e-b1be-fe0d6b24e2f1",
+        "uniq_id": 885517,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Gudumbali East",
+        "wardcode": "11010",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Gudurmari Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42967,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5979514036344,
+          12.577776248675
+        ]
+      },
+      "properties": {
+        "FID": 42967,
+        "globalid": "375bf418-919f-4138-adf7-99999c5d8502",
+        "uniq_id": 885707,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kaguram",
+        "wardcode": "12302",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Dasaa Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42968,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6649899383351,
+          12.5980951991342
+        ]
+      },
+      "properties": {
+        "FID": 42968,
+        "globalid": "d74a6112-fefd-427e-8b41-ee111ca1e600",
+        "uniq_id": 885708,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kaguram",
+        "wardcode": "12302",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kaguram Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42969,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6062974413739,
+          12.6226673151446
+        ]
+      },
+      "properties": {
+        "FID": 42969,
+        "globalid": "0c4a0345-453a-4ad5-856b-22892d35f12e",
+        "uniq_id": 885709,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kaguram",
+        "wardcode": "12302",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Zankali Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42970,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6002741159577,
+          12.5223159843952
+        ]
+      },
+      "properties": {
+        "FID": 42970,
+        "globalid": "8799e1f8-df36-4eae-bb1a-a42dbae52885",
+        "uniq_id": 885710,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Mandala",
+        "wardcode": "12304",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Mandala Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42974,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5156754405692,
+          12.5062752662906
+        ]
+      },
+      "properties": {
+        "FID": 42974,
+        "globalid": "75fcf84c-5f39-42c7-ae13-0c0c8dc3e37e",
+        "uniq_id": 885714,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Wulo",
+        "wardcode": "12310",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Wulo Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42976,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5184181003151,
+          12.5773805856456
+        ]
+      },
+      "properties": {
+        "FID": 42976,
+        "globalid": "cb49008e-b5de-4a5b-92bb-d3a2a0087a3d",
+        "uniq_id": 885716,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Wulo",
+        "wardcode": "12310",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Sherufuri Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42978,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5670233650363,
+          12.6061182723404
+        ]
+      },
+      "properties": {
+        "FID": 42978,
+        "globalid": "bc653811-9747-4e8f-947c-495a5c7b927c",
+        "uniq_id": 885718,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Wulo",
+        "wardcode": "12310",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kazaa Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42984,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1887574076283,
+          12.5308075684146
+        ]
+      },
+      "properties": {
+        "FID": 42984,
+        "globalid": "4b5e4304-1745-4c15-9b1e-5d869a174954",
+        "uniq_id": 885724,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Damaram",
+        "wardcode": "12603",
+        "lganame": "Nganzai",
+        "lgacode": "126",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Lawanti Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42986,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3027911202141,
+          12.5700813497745
+        ]
+      },
+      "properties": {
+        "FID": 42986,
+        "globalid": "430086ce-b9e3-4883-8e7c-b5637ef91ad8",
+        "uniq_id": 885726,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Jigalta",
+        "wardcode": "12606",
+        "lganame": "Nganzai",
+        "lgacode": "126",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Burimari Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42987,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3305519803897,
+          12.6181143497975
+        ]
+      },
+      "properties": {
+        "FID": 42987,
+        "globalid": "c096bd44-6ca7-4df2-98f6-055e1950363c",
+        "uniq_id": 885727,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Jigalta",
+        "wardcode": "12606",
+        "lganame": "Nganzai",
+        "lgacode": "126",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Gasarawa Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42989,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2827657498395,
+          12.5410491198211
+        ]
+      },
+      "properties": {
+        "FID": 42989,
+        "globalid": "1c7e9dd4-321a-45ea-bdf3-78db9f2c970a",
+        "uniq_id": 885729,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Alarge",
+        "wardcode": "12608",
+        "lganame": "Nganzai",
+        "lgacode": "126",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Torowa Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42993,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.140032720134,
+          12.5542492995656
+        ]
+      },
+      "properties": {
+        "FID": 42993,
+        "globalid": "e59a170a-8d3a-4626-a626-8a7565a1bd36",
+        "uniq_id": 885733,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Sabsabuwa",
+        "wardcode": "12611",
+        "lganame": "Nganzai",
+        "lgacode": "126",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Sabsabwa Lawanti Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43042,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8508672174482,
+          13.0205696007066
+        ]
+      },
+      "properties": {
+        "FID": 43042,
+        "globalid": "45131204-2bdc-435a-a488-48ea8f948dc2",
+        "uniq_id": 885782,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Barwati",
+        "wardcode": "11703",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Mallam Karamti Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43075,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6744383497501,
+          12.9392110981137
+        ]
+      },
+      "properties": {
+        "FID": 43075,
+        "globalid": "2079ab8f-c263-4db8-9517-79d5294b3693",
+        "uniq_id": 885815,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kauwa",
+        "wardcode": "11707",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Boarding Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43076,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6756823495608,
+          12.9414760047139
+        ]
+      },
+      "properties": {
+        "FID": 43076,
+        "globalid": "bc9f40cf-9a18-485e-b086-097207c21412",
+        "uniq_id": 885816,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kauwa",
+        "wardcode": "11707",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kuros Kauwa Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43077,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6923339402592,
+          12.9554016198889
+        ]
+      },
+      "properties": {
+        "FID": 43077,
+        "globalid": "45e1c87b-4263-4bab-a4e9-77be6ce8266f",
+        "uniq_id": 885817,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kauwa",
+        "wardcode": "11707",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kauwa Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43078,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6764199699057,
+          12.8627299364375
+        ]
+      },
+      "properties": {
+        "FID": 43078,
+        "globalid": "856f4576-21d6-451a-bc33-4b8a1ccfcc90",
+        "uniq_id": 885818,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Dogoshi",
+        "wardcode": "11705",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Dogoshi Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43079,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8518690100468,
+          12.8626365598294
+        ]
+      },
+      "properties": {
+        "FID": 43079,
+        "globalid": "e7a4eaca-a84d-4a22-a63f-5335984532cb",
+        "uniq_id": 885819,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kekeno",
+        "wardcode": "11708",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Ali Sheriffti Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43080,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6602416195552,
+          12.7731531403052
+        ]
+      },
+      "properties": {
+        "FID": 43080,
+        "globalid": "20a8561f-4484-43b4-af10-67cf6b50b372",
+        "uniq_id": 885820,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kekeno",
+        "wardcode": "11708",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Mile Ninety Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43081,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7584491131361,
+          12.7685585939041
+        ]
+      },
+      "properties": {
+        "FID": 43081,
+        "globalid": "d219ad17-66e4-40cf-b82b-5ce3c32439f5",
+        "uniq_id": 885821,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kekeno",
+        "wardcode": "11708",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Mallam Bayeri Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43082,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6728562399236,
+          12.7894310402104
+        ]
+      },
+      "properties": {
+        "FID": 43082,
+        "globalid": "280d69e7-e3a1-4839-bcf1-919b8a2ad699",
+        "uniq_id": 885822,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kekeno",
+        "wardcode": "11708",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kekeno Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43084,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6985727909016,
+          12.5302356697404
+        ]
+      },
+      "properties": {
+        "FID": 43084,
+        "globalid": "cbb92399-ca96-4ad5-8fe6-dc451d756bd4",
+        "uniq_id": 885824,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Mintar",
+        "wardcode": "12305",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Ngollom Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43183,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5574271203654,
+          13.149833330344
+        ]
+      },
+      "properties": {
+        "FID": 43183,
+        "globalid": "a72872af-5585-4198-acce-9503de1c3612",
+        "uniq_id": 885924,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Alagarno",
+        "wardcode": "11701",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Alagarno Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43184,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6096740898874,
+          13.1967112303391
+        ]
+      },
+      "properties": {
+        "FID": 43184,
+        "globalid": "4df3ac68-ff94-44f4-a002-dbe90dad0947",
+        "uniq_id": 885925,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Alagarno",
+        "wardcode": "11701",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Doron Naira Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43185,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7936312139095,
+          13.4149938697713
+        ]
+      },
+      "properties": {
+        "FID": 43185,
+        "globalid": "aba87617-9864-4860-af15-2322555a80fd",
+        "uniq_id": 885926,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Doro",
+        "wardcode": "11706",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Madayi Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43186,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8600550700855,
+          13.1168484199187
+        ]
+      },
+      "properties": {
+        "FID": 43186,
+        "globalid": "c74676a5-5e3a-49c6-b372-0928aae4a396",
+        "uniq_id": 885927,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Doro",
+        "wardcode": "11706",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Doro Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43187,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8041225232359,
+          13.270750963786
+        ]
+      },
+      "properties": {
+        "FID": 43187,
+        "globalid": "84b1b665-eb53-4d3d-919e-cfb4a2e39e9c",
+        "uniq_id": 885928,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Doro",
+        "wardcode": "11706",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Duguri Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43188,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8729707672871,
+          13.1093595790813
+        ]
+      },
+      "properties": {
+        "FID": 43188,
+        "globalid": "3ca094b2-4813-4524-9426-fd09ecd9d449",
+        "uniq_id": 885929,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Doro",
+        "wardcode": "11706",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Bumdurum Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43189,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8203370721982,
+          13.0942082113399
+        ]
+      },
+      "properties": {
+        "FID": 43189,
+        "globalid": "5e9116c5-4d08-436b-8587-29604561d708",
+        "uniq_id": 885930,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Baga Central Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43190,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8241983707583,
+          13.0829951879776
+        ]
+      },
+      "properties": {
+        "FID": 43190,
+        "globalid": "28b62e7f-cfc7-4dd8-9f49-b53b3b5223ba",
+        "uniq_id": 885931,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Baga Fulatari Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43191,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7892420978446,
+          13.0762239018117
+        ]
+      },
+      "properties": {
+        "FID": 43191,
+        "globalid": "6f0ed085-91b5-4e48-8bbd-0aa9cfd91ea1",
+        "uniq_id": 885932,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Mile 3 Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43192,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7626370301749,
+          13.0561439003208
+        ]
+      },
+      "properties": {
+        "FID": 43192,
+        "globalid": "893c753b-96ff-4b1c-9047-1c70fd4e35dd",
+        "uniq_id": 885933,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Integrated",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Dubartab Nomadic Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43193,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8311550098958,
+          13.1041625939286
+        ]
+      },
+      "properties": {
+        "FID": 43193,
+        "globalid": "511b3fa2-2265-4c2b-89cf-d088d533074f",
+        "uniq_id": 885934,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Budu Mari Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43194,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6709761001669,
+          12.811446649843
+        ]
+      },
+      "properties": {
+        "FID": 43194,
+        "globalid": "16363c71-7fb0-44f3-981f-91f7ad7edfaa",
+        "uniq_id": 885935,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Yoyo",
+        "wardcode": "11710",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Barwati Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43196,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0311316300208,
+          12.6472485098109
+        ]
+      },
+      "properties": {
+        "FID": 43196,
+        "globalid": "b9260b95-5a8b-48aa-aaab-f91bbf474e58",
+        "uniq_id": 885937,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Felo",
+        "wardcode": "10902",
+        "lganame": "Gubio",
+        "lgacode": "109",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Shataram Lawanti Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43225,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6923213002878,
+          12.8924821780101
+        ]
+      },
+      "properties": {
+        "FID": 43225,
+        "globalid": "d763df88-7e20-41a4-a559-718f7ec71721",
+        "uniq_id": 885966,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Bundur",
+        "wardcode": "11704",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Bundur Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45494,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1804501999168,
+          12.9481011600406
+        ]
+      },
+      "properties": {
+        "FID": 45494,
+        "globalid": "79e64246-2078-4e6e-b817-f5a4da3f237d",
+        "uniq_id": 888239,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Gudumbali East",
+        "wardcode": "11010",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Standard",
+        "category": "Primary",
+        "name": "Gudumbari Central Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46090,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2932478204306,
+          12.70083368043
+        ]
+      },
+      "properties": {
+        "FID": 46090,
+        "globalid": "bd388919-1f7c-48d6-920e-fe6214a14b80",
+        "uniq_id": 888834,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Guzamala East",
+        "wardcode": "11003",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Ngollom Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46091,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3716165997263,
+          12.6611477100988
+        ]
+      },
+      "properties": {
+        "FID": 46091,
+        "globalid": "3fe186e0-4ee8-4691-aa5e-8ac8b1687654",
+        "uniq_id": 888835,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Mairari",
+        "wardcode": "11006",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Ali Gambori Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46092,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7226901899004,
+          13.0019035097392
+        ]
+      },
+      "properties": {
+        "FID": 46092,
+        "globalid": "2b6968ec-15e3-4dde-b2ab-0240f857a84d",
+        "uniq_id": 888836,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kauwa",
+        "wardcode": "11707",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Integrated",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Nomadic Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46110,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4287301497766,
+          12.5103683003568
+        ]
+      },
+      "properties": {
+        "FID": 46110,
+        "globalid": "e1ef08cf-5878-429d-ac04-a3fd4224ce35",
+        "uniq_id": 888855,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kumalia",
+        "wardcode": "12303",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Chirchirawa Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46111,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4689642218214,
+          12.5515347778078
+        ]
+      },
+      "properties": {
+        "FID": 46111,
+        "globalid": "10a6a1fc-dd9e-448b-81d0-144fc212498d",
+        "uniq_id": 888856,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kumalia",
+        "wardcode": "12303",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Magararam Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46113,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3633768600541,
+          12.5785785896302
+        ]
+      },
+      "properties": {
+        "FID": 46113,
+        "globalid": "35dbabe4-6801-4ac7-8063-8da243e43762",
+        "uniq_id": 888858,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Mairari",
+        "wardcode": "11006",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kangala Gana Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46115,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6160272002951,
+          12.6712354495564
+        ]
+      },
+      "properties": {
+        "FID": 46115,
+        "globalid": "3ed229a2-a3da-4528-8f86-6104ab98a187",
+        "uniq_id": 888860,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Private",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Nura Islam Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46116,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6092185338084,
+          12.65953539834
+        ]
+      },
+      "properties": {
+        "FID": 46116,
+        "globalid": "3ea4def9-e4ed-4979-bc59-7222a82ec521",
+        "uniq_id": 888861,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Mune Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46117,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6592920496884,
+          12.7295691700812
+        ]
+      },
+      "properties": {
+        "FID": 46117,
+        "globalid": "494aaa9a-b666-4a2b-95be-2660200739cf",
+        "uniq_id": 888862,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Yoyo",
+        "wardcode": "11710",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Yoyo Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46118,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6190758399781,
+          12.6644511699856
+        ]
+      },
+      "properties": {
+        "FID": 46118,
+        "globalid": "b1e4e565-85a2-4c35-9ca7-7cb76705cda0",
+        "uniq_id": 888863,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kuya Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46130,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5029092529597,
+          13.3090045380291
+        ]
+      },
+      "properties": {
+        "FID": 46130,
+        "globalid": "10b095cc-fd06-4861-9731-a22b1d0766e7",
+        "uniq_id": 888875,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Doro",
+        "wardcode": "11706",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kangarwa Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46169,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5701125857273,
+          12.9267819818031
+        ]
+      },
+      "properties": {
+        "FID": 46169,
+        "globalid": "53d436d3-6293-43b5-8745-d836fb0f0088",
+        "uniq_id": 888914,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kukawa",
+        "wardcode": "11709",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Standard",
+        "category": "Primary",
+        "name": "Aji Masta Central Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46190,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8611574806333,
+          12.7808614543927
+        ]
+      },
+      "properties": {
+        "FID": 46190,
+        "globalid": "36d5b154-943f-4c99-b2fa-81eced878e49",
+        "uniq_id": 888935,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kekeno",
+        "wardcode": "11708",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Dabar Gajere Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46191,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8382642163206,
+          12.801122072126
+        ]
+      },
+      "properties": {
+        "FID": 46191,
+        "globalid": "42681c9d-c691-4c7a-80c6-5be5a391187b",
+        "uniq_id": 888936,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kekeno",
+        "wardcode": "11708",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Daban Masara Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46192,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8629974395802,
+          12.8961454800299
+        ]
+      },
+      "properties": {
+        "FID": 46192,
+        "globalid": "18569142-ef73-4d61-9299-e40dacb40372",
+        "uniq_id": 888937,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Dogoshi",
+        "wardcode": "11705",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Kwatan Dogoshi Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53340,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5710236286376,
+          12.927189187631
+        ]
+      },
+      "properties": {
+        "FID": 53340,
+        "globalid": "732717e8-80c8-48ca-a9e4-08a53615d60c",
+        "uniq_id": 896121,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kukawa",
+        "wardcode": "11709",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Maina Maaji Boarding Primary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84666,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7715863502299,
+          13.0647131461948
+        ]
+      },
+      "properties": {
+        "FID": 84666,
+        "globalid": "944c20f8-63a1-417e-bfb9-b329136b7643",
+        "uniq_id": 932432,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Primary Ube School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84740,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5107272555584,
+          12.6875403363175
+        ]
+      },
+      "properties": {
+        "FID": 84740,
+        "globalid": "54f1f47e-eca4-4282-a9fd-da5e1808db3b",
+        "uniq_id": 932573,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Guworam",
+        "wardcode": "11007",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Liqir Primqry School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84749,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.0666600001589,
+          12.5534700001405
+        ]
+      },
+      "properties": {
+        "FID": 84749,
+        "globalid": "5c5b6a4f-2d5d-46c6-b665-0e597fbde1f7",
+        "uniq_id": 932582,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Wulgo",
+        "wardcode": "12510",
+        "lganame": "Ngala",
+        "lgacode": "125",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Primary",
+        "category": "Primary",
+        "name": "Chuku Ngodowa Primary Sxhool",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84772,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6207897076789,
+          12.6919893058619
+        ]
+      },
+      "properties": {
+        "FID": 84772,
+        "globalid": "2f626992-c163-4fbb-b5c9-7b40f180ca80",
+        "uniq_id": 932615,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Standard",
+        "category": "Secondary",
+        "name": "Fedral Government Girl Collage Monguno",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84796,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7817826090802,
+          13.0761085997322
+        ]
+      },
+      "properties": {
+        "FID": 84796,
+        "globalid": "7a4f17ae-d8d0-442c-9dac-2e7c3aa7ad8e",
+        "uniq_id": 932643,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Standard",
+        "category": "Others",
+        "name": "Fishery School",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85024,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.805587890269,
+          13.0835497396288
+        ]
+      },
+      "properties": {
+        "FID": 85024,
+        "globalid": "71d5313c-e105-49cb-aa4e-c4d93803dd16",
+        "uniq_id": 933315,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Standard",
+        "category": "Secondary",
+        "name": "Government Girls Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85025,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.7714880597262,
+          13.0654328097764
+        ]
+      },
+      "properties": {
+        "FID": 85025,
+        "globalid": "327f7235-766e-4d63-a37a-c12acb0fabd4",
+        "uniq_id": 933316,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Aggregate",
+        "category": "Secondary",
+        "name": "Shehu Laminu Junior Day Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85026,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8203457038912,
+          13.0947896922905
+        ]
+      },
+      "properties": {
+        "FID": 85026,
+        "globalid": "ac33924b-cb7c-4fac-bb3a-10ac0ec04bd9",
+        "uniq_id": 933317,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Standard",
+        "category": "Secondary",
+        "name": "Baga Government Day Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87154,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.773523900008,
+          13.061831759728
+        ]
+      },
+      "properties": {
+        "FID": 87154,
+        "globalid": "d90371f4-49d0-404d-ad5f-c56423a402be",
+        "uniq_id": 935746,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Integrated",
+        "management": "Public",
+        "subtype": "Pre Primary",
+        "category": "Primary",
+        "name": "Ardo Idris School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87374,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6108379960767,
+          12.6799902498502
+        ]
+      },
+      "properties": {
+        "FID": 87374,
+        "globalid": "c81940b5-f98a-427b-8939-f12d0581696a",
+        "uniq_id": 935970,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Standard",
+        "category": "Secondary",
+        "name": "Monguno Government Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87375,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6272766102275,
+          12.6629042398388
+        ]
+      },
+      "properties": {
+        "FID": 87375,
+        "globalid": "20511f02-6f5c-46b8-9430-b42227f0470a",
+        "uniq_id": 935972,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Integrated",
+        "management": "Public",
+        "subtype": "Standard",
+        "category": "Secondary",
+        "name": "IBN Fatawa Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87377,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5719172705656,
+          12.9308587579254
+        ]
+      },
+      "properties": {
+        "FID": 87377,
+        "globalid": "55b90d24-00d0-43dd-85ad-34d5e1d556b1",
+        "uniq_id": 935976,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kukawa",
+        "wardcode": "11709",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Standard",
+        "category": "Secondary",
+        "name": "Kukawa Government Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94477,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6234878887551,
+          12.6786704003188
+        ]
+      },
+      "properties": {
+        "FID": 94477,
+        "globalid": "99509928-b1e3-43f1-841b-7dc9c33393e8",
+        "uniq_id": 943993,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Standard",
+        "category": "Secondary",
+        "name": "Monguno Government Girls Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103321,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1905869090587,
+          12.5025710190374
+        ]
+      },
+      "properties": {
+        "FID": 103321,
+        "globalid": "9f458d43-27cc-41e9-b48c-7f41ffae5be4",
+        "uniq_id": 953776,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Wulgo",
+        "wardcode": "12510",
+        "lganame": "Ngala",
+        "lgacode": "125",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Junior Secondary School Danbure",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103670,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.2773287788002,
+          12.6638557873148
+        ]
+      },
+      "properties": {
+        "FID": 103670,
+        "globalid": "62f2394f-b025-466e-ba4f-18ea37eff8cf",
+        "uniq_id": 954124,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Guzamala West",
+        "wardcode": "11004",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Guzamala Junior Day Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103671,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4416246742394,
+          12.6833250798886
+        ]
+      },
+      "properties": {
+        "FID": 103671,
+        "globalid": "c1bd3629-7655-4efa-8a01-a01dc4113bc5",
+        "uniq_id": 954125,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Mairari",
+        "wardcode": "11006",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Mairari Government Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103672,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.1798225603629,
+          12.947618369792
+        ]
+      },
+      "properties": {
+        "FID": 103672,
+        "globalid": "92de09ae-fcd4-4956-92ee-92d2489b536f",
+        "uniq_id": 954126,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Gudumbali East",
+        "wardcode": "11010",
+        "lganame": "Guzamala",
+        "lgacode": "110",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Gudunbari Government Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103707,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6757485423614,
+          12.9405339702666
+        ]
+      },
+      "properties": {
+        "FID": 103707,
+        "globalid": "4ba1ceb5-dadf-4cd9-badb-5ca2fee4fb8d",
+        "uniq_id": 954160,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kauwa",
+        "wardcode": "11707",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Kauwa Cross Government Day Junior Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103708,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6603369971547,
+          12.7735940788037
+        ]
+      },
+      "properties": {
+        "FID": 103708,
+        "globalid": "6d8dbef7-7ddb-4adc-b39b-0c93b7ab6fb1",
+        "uniq_id": 954161,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kekeno",
+        "wardcode": "11708",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Mile Ninety Day Junior Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103709,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8465954602124,
+          12.8593092795996
+        ]
+      },
+      "properties": {
+        "FID": 103709,
+        "globalid": "22e002eb-f29d-476b-ac73-539365a66ab7",
+        "uniq_id": 954162,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kekeno",
+        "wardcode": "11708",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Ali Sheriffti Junior Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103718,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8603376298778,
+          13.1164779495978
+        ]
+      },
+      "properties": {
+        "FID": 103718,
+        "globalid": "2c377c70-8ad1-4cbe-bd16-5c7bf6d2b39c",
+        "uniq_id": 954171,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Doro",
+        "wardcode": "11706",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Doro Junior Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103719,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8197286430625,
+          13.0945580799914
+        ]
+      },
+      "properties": {
+        "FID": 103719,
+        "globalid": "bdf50541-d86c-4aab-972f-d5c019352819",
+        "uniq_id": 954172,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Baga",
+        "wardcode": "11702",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Ube Baga Junior Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103992,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6056623428429,
+          12.6722261373264
+        ]
+      },
+      "properties": {
+        "FID": 103992,
+        "globalid": "1e220109-d2f1-4f6a-901a-8216f092a7c0",
+        "uniq_id": 954445,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Monguno",
+        "wardcode": "12307",
+        "lganame": "Monguno",
+        "lgacode": "123",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Monguno Government Day Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103994,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5709697403613,
+          12.9262825900695
+        ]
+      },
+      "properties": {
+        "FID": 103994,
+        "globalid": "5568aeff-e150-4664-bc13-66b2a8f91b68",
+        "uniq_id": 954447,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kukawa",
+        "wardcode": "11709",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Aji Masta Junior Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103995,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5022774459474,
+          13.309541423398
+        ]
+      },
+      "properties": {
+        "FID": 103995,
+        "globalid": "928b6ae8-9236-440e-9920-7b158ca7a1d9",
+        "uniq_id": 954448,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Doro",
+        "wardcode": "11706",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Junior",
+        "category": "Secondary",
+        "name": "Kangarwa Government Day Junior Secondary School",
+        "source": "NMIS"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105893,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5722482750379,
+          12.92563090804
+        ]
+      },
+      "properties": {
+        "FID": 105893,
+        "globalid": "68d967db-d62f-490a-b955-9c2ffd0cd923",
+        "uniq_id": 956360,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kukawa",
+        "wardcode": "11709",
+        "lganame": "Kukawa",
+        "lgacode": "117",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Public",
+        "subtype": "Senior",
+        "category": "Secondary",
+        "name": "Government Secondary School Kukawa",
+        "source": "OSGOF"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106490,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1473899998487,
+          12.7630800004417
+        ]
+      },
+      "properties": {
+        "FID": 106490,
+        "globalid": "096575c8-341a-4a8e-b3d7-dcf0156ace2d",
+        "uniq_id": 956960,
+        "timestamp": "Fri, 11 Dec 2020 00:00:00 GMT",
+        "editor": "najib.adam",
+        "wardname": "Kirenowa",
+        "wardcode": "12107",
+        "lganame": "Marte",
+        "lgacode": "121",
+        "statename": "Borno",
+        "statecode": "BR",
+        "secondary_": " ",
+        "student_ct": " ",
+        "teacher_ct": " ",
+        "poi_type": "School",
+        "education": "Formal",
+        "management": "Unknown",
+        "subtype": "Senior",
+        "category": "Mixed",
+        "name": "Sagir Primary Secondary School",
+        "source": "OSGOF"
+      }
+    }
+  ]
+}
