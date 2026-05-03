@@ -172,8 +172,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
     <script>
-        // Initialize Map
-        const map = L.map('map', { zoomControl: false }).setView([13.15, 13.7], 9);
+        // Initialize Map (Start with a broader view of Nigeria)
+        const map = L.map('map', { zoomControl: false }).setView([11.5, 13.0], 7);
         L.control.zoom({ position: 'topright' }).addTo(map);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -181,7 +181,7 @@
             opacity: 0.8
         }).addTo(map);
 
-        // Define Study Area Perimeter
+        // Define Study Area Perimeter (This stays visible)
         const perimeterCoords = [[12.5, 13.0], [13.8, 14.8]];
         const studyArea = L.rectangle(perimeterCoords, {
             color: "#3498db",
@@ -197,9 +197,19 @@
         const secondaryGroup = L.layerGroup();
         const conflictGroup = L.layerGroup();
 
+        // Ensure layers are NOT on map (Redundant but safe)
+        map.removeLayer(heatGroup);
+        map.removeLayer(roadsGroup);
+        map.removeLayer(primaryGroup);
+        map.removeLayer(secondaryGroup);
+        map.removeLayer(conflictGroup);
+
         // Button Control Logic
         function setupButton(id, layers) {
             const btn = document.getElementById(id);
+            // Ensure button doesn't have active class initially
+            btn.classList.remove('active');
+            
             btn.addEventListener('click', () => {
                 const isActive = btn.classList.toggle('active');
                 btn.querySelector('.status-pill').innerText = isActive ? 'ON' : 'OFF';
