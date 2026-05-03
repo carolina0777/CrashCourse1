@@ -14,6 +14,7 @@
     <div id="map"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
     <script>
         // Initialize map focused on the North border
@@ -27,6 +28,7 @@
         const secondaryGroup = L.layerGroup().addTo(map);
         const heatGroup = L.layerGroup().addTo(map);
         const roadsGroup = L.layerGroup().addTo(map);
+        const conflictGroup = L.layerGroup().addTo(map);
 
         // 1. Schools (Filtered to Northern Tip)
         fetch('schools_northern_tip.geojson')
@@ -65,11 +67,47 @@
                 L.heatLayer(heatPoints, { radius: 30, blur: 20, minOpacity: 0.4, gradient: {0.4:'#abd9e9', 0.7:'#fee090', 1.0:'#f46d43'} }).addTo(heatGroup);
             });
 
+        // 4. Conflict Events (2020-2025)
+        Papa.parse('conflict_events.csv', {
+            download: true,
+            header: true,
+            delimiter: ";",
+            complete: function(results) {
+                results.data.forEach(row => {
+                    const lat = parseFloat(row.latitude) / 1000000;
+                    const lon = parseFloat(row.longitude) / 1000000;
+                    const year = parseInt(row.year);
+                    
+                    // Filter: Northern tip + Years 2020-2025
+                    if (!isNaN(lat) && !isNaN(lon) && year >= 2020) {
+                        if (lon >= 13.0 && lon <= 14.8 && lat >= 12.5 && lat <= 13.8) {
+                            const fatalities = parseInt(row.best) || 0;
+                            const marker = L.circleMarker([lat, lon], {
+                                radius: 4 + Math.sqrt(fatalities) * 2,
+                                fillColor: "#e74c3c",
+                                color: "#c0392b",
+                                weight: 1,
+                                fillOpacity: 0.6
+                            }).bindPopup(`
+                                <strong>Conflict Event (${row.year})</strong><br>
+                                <strong>Location:</strong> ${row.where_coordinates}<br>
+                                <strong>Fatalities:</strong> ${fatalities}<br>
+                                <strong>Side A:</strong> ${row.side_a}<br>
+                                <strong>Side B:</strong> ${row.side_b}
+                            `);
+                            conflictGroup.addLayer(marker);
+                        }
+                    }
+                });
+            }
+        });
+
         L.control.layers(null, {
             "Primary Schools": primaryGroup,
             "Secondary Schools": secondaryGroup,
             "Road Network": roadsGroup,
-            "Population Density": heatGroup
+            "Population Density": heatGroup,
+            "Conflict Events (2020-2025)": conflictGroup
         }, { collapsed: false }).addTo(map);
 
     </script>
