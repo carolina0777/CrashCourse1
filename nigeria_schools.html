@@ -117,17 +117,17 @@
 
         <div class="sidebar-section">
             <h2>Layer Visibility</h2>
-            <button class="control-btn active" id="btn-population">
-                Population Density <span class="status-pill">ON</span>
+            <button class="control-btn" id="btn-population">
+                Population Density <span class="status-pill">OFF</span>
             </button>
-            <button class="control-btn active" id="btn-schools">
-                Educational Facilities <span class="status-pill">ON</span>
+            <button class="control-btn" id="btn-schools">
+                Educational Facilities <span class="status-pill">OFF</span>
             </button>
-            <button class="control-btn active" id="btn-roads">
-                Infrastructure / Roads <span class="status-pill">ON</span>
+            <button class="control-btn" id="btn-roads">
+                Infrastructure / Roads <span class="status-pill">OFF</span>
             </button>
-            <button class="control-btn active" id="btn-conflict">
-                Conflict Monitoring <span class="status-pill">ON</span>
+            <button class="control-btn" id="btn-conflict">
+                Conflict Monitoring <span class="status-pill">OFF</span>
             </button>
         </div>
 
@@ -149,6 +149,10 @@
                 <div class="legend-item">
                     <div class="legend-color" style="background: #e74c3c; border: 2.5px solid #c0392b; width: 14px; height: 14px;"></div> 
                     Conflict Incidents
+                </div>
+                <div class="legend-item">
+                    <div class="legend-line" style="border: 1px dashed #3498db; background: none; width: 20px;"></div> 
+                    Study Area Perimeter
                 </div>
                 
                 <div style="margin-top: 20px;">
@@ -177,12 +181,21 @@
             opacity: 0.8
         }).addTo(map);
 
-        // Layer Groups (Order matters for default z-index)
-        const heatGroup = L.layerGroup().addTo(map);
-        const roadsGroup = L.layerGroup().addTo(map);
-        const primaryGroup = L.layerGroup().addTo(map);
-        const secondaryGroup = L.layerGroup().addTo(map);
-        const conflictGroup = L.layerGroup().addTo(map);
+        // Define Study Area Perimeter
+        const perimeterCoords = [[12.5, 13.0], [13.8, 14.8]];
+        const studyArea = L.rectangle(perimeterCoords, {
+            color: "#3498db",
+            weight: 2,
+            fillOpacity: 0,
+            dashArray: "5, 10"
+        }).addTo(map);
+
+        // Layer Groups (Initial state: NOT added to map)
+        const heatGroup = L.layerGroup();
+        const roadsGroup = L.layerGroup();
+        const primaryGroup = L.layerGroup();
+        const secondaryGroup = L.layerGroup();
+        const conflictGroup = L.layerGroup();
 
         // Button Control Logic
         function setupButton(id, layers) {
@@ -190,6 +203,12 @@
             btn.addEventListener('click', () => {
                 const isActive = btn.classList.toggle('active');
                 btn.querySelector('.status-pill').innerText = isActive ? 'ON' : 'OFF';
+                
+                if (isActive) {
+                    // Zoom to study area when a filter is turned ON
+                    map.fitBounds(studyArea.getBounds(), { padding: [30, 30], animate: true });
+                }
+
                 layers.forEach(layer => {
                     if (isActive) map.addLayer(layer);
                     else map.removeLayer(layer);
@@ -206,7 +225,7 @@
         fetch('schools_northern_tip.geojson')
             .then(res => res.json())
             .then(data => {
-                const layer = L.geoJSON(data, {
+                L.geoJSON(data, {
                     filter: f => ['Primary', 'Pre Primary', 'Secondary'].includes(f.properties.category),
                     onEachFeature: (f, l) => {
                         l.bindPopup(`<strong>${f.properties.name}</strong><br>Type: ${f.properties.category}`);
@@ -224,7 +243,6 @@
                         });
                     }
                 });
-                map.fitBounds(layer.getBounds(), { padding: [50, 50] });
             });
 
         // 2. Road Network (Subtle Context)
