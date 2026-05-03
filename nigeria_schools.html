@@ -24,10 +24,10 @@
             attribution: '© OpenStreetMap contributors'
         }).addTo(map);
 
-        const primaryGroup = L.layerGroup().addTo(map);
-        const secondaryGroup = L.layerGroup().addTo(map);
         const heatGroup = L.layerGroup().addTo(map);
         const roadsGroup = L.layerGroup().addTo(map);
+        const primaryGroup = L.layerGroup().addTo(map);
+        const secondaryGroup = L.layerGroup().addTo(map);
         const conflictGroup = L.layerGroup().addTo(map);
 
         // 1. Schools (Filtered to Northern Tip)
@@ -64,7 +64,7 @@
             .then(res => res.json())
             .then(data => {
                 const heatPoints = data.features.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0], 0.5]);
-                L.heatLayer(heatPoints, { radius: 30, blur: 20, minOpacity: 0.4, gradient: {0.4:'#abd9e9', 0.7:'#fee090', 1.0:'#f46d43'} }).addTo(heatGroup);
+                L.heatLayer(heatPoints, { radius: 30, blur: 20, minOpacity: 0.4, gradient: {0.4: '#edf8fb', 0.7: '#8c96c6', 1.0: '#810f7c'} }).addTo(heatGroup);
             });
 
         // 4. Conflict Events (2020-2025)
