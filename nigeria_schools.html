@@ -82,18 +82,23 @@
                     if (!isNaN(lat) && !isNaN(lon) && year >= 2020) {
                         if (lon >= 13.0 && lon <= 14.8 && lat >= 12.5 && lat <= 13.8) {
                             const fatalities = parseInt(row.best) || 0;
+                            const type = row.conflict_name || "Unknown Conflict";
                             const marker = L.circleMarker([lat, lon], {
-                                radius: 4 + Math.sqrt(fatalities) * 2,
+                                radius: 5 + Math.sqrt(fatalities) * 3,
                                 fillColor: "#e74c3c",
                                 color: "#c0392b",
-                                weight: 1,
-                                fillOpacity: 0.6
+                                weight: 1.5,
+                                fillOpacity: 0.7
                             }).bindPopup(`
-                                <strong>Conflict Event (${row.year})</strong><br>
-                                <strong>Location:</strong> ${row.where_coordinates}<br>
-                                <strong>Fatalities:</strong> ${fatalities}<br>
-                                <strong>Side A:</strong> ${row.side_a}<br>
-                                <strong>Side B:</strong> ${row.side_b}
+                                <div style="font-family: sans-serif;">
+                                    <h3 style="margin: 0 0 10px 0; color: #c0392b;">Conflict Event (${row.year})</h3>
+                                    <strong>Type:</strong> ${type}<br>
+                                    <strong>Location:</strong> ${row.where_coordinates}<br>
+                                    <strong>Fatalities:</strong> <span style="font-size: 1.2em; color: #e74c3c;">${fatalities}</span><br>
+                                    <hr style="margin: 10px 0;">
+                                    <strong>Side A:</strong> ${row.side_a}<br>
+                                    <strong>Side B:</strong> ${row.side_b}
+                                </div>
                             `);
                             conflictGroup.addLayer(marker);
                         }
