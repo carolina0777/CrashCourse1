@@ -181,8 +181,8 @@
             opacity: 0.8
         }).addTo(map);
 
-        // Define Study Area Perimeter (This stays visible)
-        const perimeterCoords = [[12.5, 13.0], [13.8, 14.8]];
+        // Define Study Area Perimeter (Aligned closer to Nigerian border)
+        const perimeterCoords = [[12.5, 13.0], [13.8, 14.4]];
         const studyArea = L.rectangle(perimeterCoords, {
             color: "#3498db",
             weight: 2,
@@ -284,7 +284,7 @@
                     const year = parseInt(row.year);
                     
                     if (!isNaN(lat) && !isNaN(lon) && year >= 2020) {
-                        if (lon >= 13.0 && lon <= 14.8 && lat >= 12.5 && lat <= 13.8) {
+                        if (lon >= 13.0 && lon <= 14.4 && lat >= 12.5 && lat <= 13.8) {
                             const fatalities = parseInt(row.best) || 0;
                             const marker = L.circleMarker([lat, lon], {
                                 radius: 5 + Math.sqrt(fatalities) * 3,
