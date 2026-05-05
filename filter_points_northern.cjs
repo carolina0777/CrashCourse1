@@ -15,5 +15,5 @@ function filterFile(input, output) {
     console.log("Filtered " + input + ": " + data.features.length + " -> " + filtered.length);
 }
 
-filterFile('./data/schools_filtered.geojson', './data/schools_northern_tip.geojson');
-filterFile('./data/populated_places_filtered.geojson', './data/populated_places_northern_tip.geojson');
+filterFile('data/cleaned/schools_filtered.geojson', 'data/cleaned/schools_northern_tip.geojson');
+filterFile('data/cleaned/populated_places_filtered.geojson', 'data/cleaned/populated_places_northern_tip.geojson');

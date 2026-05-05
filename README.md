@@ -1,19 +1,46 @@
-# Northern Nigeria Education Mapping
+# Geospatial Decision-Support Tool: Borno State Education & Safety
 
-This project visualizes the distribution of primary and secondary schools across Northern eastern tip of Nigeria, specifically focusing on a portion of the Borno State.
+This project provides an interactive visualization of educational infrastructure in North-Eastern Borno State, Nigeria, integrated with conflict monitoring and real-time safety alerts.
 
 ## 📍 Live Map
-*   **Borno Schools Map:** [https://carolina0777.github.io/CrashCourse1/](https://carolina0777.github.io/CrashCourse1/)
+*   **Nigeria Schools & Conflict Map:** [https://carolina0777.github.io/CrashCourse1/nigeria_schools.html](https://carolina0777.github.io/CrashCourse1/nigeria_schools.html)
 
-## 📊 Project Details
-- **Data Source:** [GRID3 (Nigeria Schools)](https://data.grid3.org/datasets/grid3-nigeria-schools)
-- 
-- **Coverage:** north eastern Borno State 
-- **Functionality:** An interactive Leaflet map using circle markers for performance, with popups detailing school names, types, and administrative boundaries.
+## 📊 Data Sources & Layers
+
+The map integrates multiple geospatial datasets to provide a comprehensive view of the intersection between education and security:
+
+### 1. Educational Facilities (Schools)
+*   **Source:** [GRID3 (Nigeria Schools)](https://data.grid3.org/datasets/grid3-nigeria-schools)
+*   **Description:** Distribution of Primary, Pre-Primary, and Secondary schools.
+*   **Visuals:** Green (Primary/Pre-Primary) and Orange (Secondary) circle markers.
+
+### 2. Conflict Monitoring (Vetted Historical Data)
+*   **Source:** [UCDP GED (Uppsala Conflict Data Program)](https://ucdp.uu.se/downloads/index.html#ged_global)
+*   **Description:** Historical conflict events (2020+) within the study area, including fatality counts and event types.
+*   **Visuals:** Red circle markers scaled by fatality count.
+
+### 3. Live Conflict Alerts (Real-time News)
+*   **Source:** [GDELT Project (Global Database of Events, Language, and Tone)](https://www.gdeltproject.org/)
+*   **Description:** Real-time news alerts mentioning armed conflict and fatalities, updated every 30 minutes via the GDELT Geo 2.0 API.
+*   **Visuals:** Yellow circle markers.
+
+### 4. Infrastructure & Roads
+*   **Source:** [OpenStreetMap (OSM)](https://www.openstreetmap.org/)
+*   **Description:** Road network supporting school accessibility and regional connectivity.
+*   **Visuals:** Contextual light grey lines, highlighting on click.
+
+### 5. Population Density
+*   **Source:** [GRID3 Settlement Layer](https://grid3.org/) / OpenStreetMap.
+*   **Description:** Heatmap visualization of populated places to identify high-need areas and population centers.
+*   **Visuals:** Multi-color intensity gradient (Heatmap).
 
 ## 🛠 Tools & Scripts
-- `filter_geojson.cjs`: A reusable Node.js script used to filter large national GeoJSON datasets into specific regions using a geographic bounding box.
-- **Mapping:** Built with Leaflet.js.
+- **Leaflet.js:** Primary open-source library for interactive mapping.
+- **Leaflet.heat:** Plugin for generating population density heatmaps.
+- **PapaParse:** Robust CSV parser for handling conflict data.
+- **Node.js Scripts:** 
+    - `filter_geojson.cjs`: Filters national GeoJSON datasets by geographic bounding box.
+    - `filter_conflict_csv.cjs`: Filters large-scale conflict datasets for the specific study area.
 
 ---
-*Note: This repository has been transitioned to focus on Nigerian educational infrastructure mapping.*
+*Note: This repository focuses on the intersection of educational infrastructure and regional security in Northern Nigeria.*

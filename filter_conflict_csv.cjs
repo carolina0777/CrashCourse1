@@ -4,11 +4,11 @@ const readline = require('readline');
 const BBOX = { minLon: 13.0, maxLon: 14.8, minLat: 12.5, maxLat: 13.8 };
 
 const rl = readline.createInterface({
-    input: fs.createReadStream('./data/conflict_data_nga.csv'),
+    input: fs.createReadStream('data/raw/conflict_events.csv'),
     terminal: false
 });
 
-const out = fs.createWriteStream('./data/conflict_northern_tip.csv');
+const out = fs.createWriteStream('data/cleaned/conflict_northern_tip.csv');
 
 let header = null;
 let latIdx = -1;

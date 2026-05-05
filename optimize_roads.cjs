@@ -3,11 +3,11 @@ const readline = require('readline');
 
 // Input is our current filtered file
 const rl = readline.createInterface({
-  input: fs.createReadStream('./data/roads_lines_filtered.geojson'),
+  input: fs.createReadStream('data/cleaned/roads_lines_filtered.geojson'),
   terminal: false
 });
 
-const out = fs.createWriteStream('./data/roads_final_optimized.geojson');
+const out = fs.createWriteStream('data/cleaned/roads_final_optimized.geojson');
 out.write('{"type":"FeatureCollection","features":[\n');
 
 let first = true;

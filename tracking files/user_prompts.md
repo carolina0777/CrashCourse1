@@ -59,5 +59,11 @@ This file contains the chronological list of prompts used in this session.
 55. **"i can now see polygons. is it possible to show the roads as lines?"**
 56. **"got it! i downloaded it and published it on the repository. can you clean it so that it covers the borno/maiduguri area ?..."**
 57. **"i don't see the road lines, can you push and commit and publish to github pages?"**
-58. **"thank you, please remove from the map the polygon data related to roads now that we have the lines"**
-59. **"did you finish?"**
+58. "thank you, please remove from the map the polygon data related to roads now that we have the lines"
+59. "did you finish?"
+60. "can you update readme.md with all the new sources we used for the leaflet map?"
+61. "let me be specific. it needs to be updated with all the sources we used for the NIgeria leaflet map"
+62. "please resume updating and correcting source documentation on sources.md, including also the sources you suggested but i did not use"
+63. "thank you. i would now like you to organize my repository so that the data folder has two sub-folders: one for raw files used and one for cleaned files used."
+64. "can you update user_prompts with all the prompts i used in our conversations?"
+

@@ -255,7 +255,7 @@
         setupButton('btn-gdelt', [gdeltGroup]);
 
         // 1. Schools (Filtered to Northern Tip)
-        fetch('schools_northern_tip.geojson')
+        fetch('data/cleaned/schools_northern_tip.geojson')
             .then(res => res.json())
             .then(data => {
                 L.geoJSON(data, {
@@ -290,7 +290,7 @@
             });
 
         // 2. Road Network (Contextual Light Grey - Faint by default)
-        fetch('roads_northern_tip.geojson')
+        fetch('data/cleaned/roads_northern_tip.geojson')
             .then(res => res.json())
             .then(data => {
                 roadsLayer = L.geoJSON(data, {
@@ -299,7 +299,7 @@
             });
 
         // 3. Population Heatmap (Background)
-        fetch('populated_places_northern_tip.geojson')
+        fetch('data/cleaned/populated_places_northern_tip.geojson')
             .then(res => res.json())
             .then(data => {
                 const heatPoints = data.features.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0], 0.5]);
@@ -307,7 +307,7 @@
             });
 
         // 4. Conflict Events (High Impact)
-        Papa.parse('conflict_events.csv', {
+        Papa.parse('data/raw/conflict_events.csv', {
             download: true,
             header: true,
             delimiter: ";",

@@ -3,11 +3,11 @@ const readline = require('readline');
 const BBOX = { minLon: 13.0, maxLon: 14.8, minLat: 12.5, maxLat: 13.8 };
 
 const rl = readline.createInterface({
-  input: fs.createReadStream('./raw_roads.geojson'),
+  input: fs.createReadStream('data/raw/raw_roads.geojson'),
   terminal: false
 });
 
-const out = fs.createWriteStream('./data/roads_northern_tip.geojson');
+const out = fs.createWriteStream('data/cleaned/roads_northern_tip.geojson');
 out.write('{"type":"FeatureCollection","features":[\n');
 let first = true;
 

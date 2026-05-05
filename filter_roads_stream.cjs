@@ -1,7 +1,7 @@
 const fs = require('fs');
 const readline = require('readline');
-const rl = readline.createInterface({ input: fs.createReadStream('./raw_roads.geojson'), terminal: false });
-const out = fs.createWriteStream('./data/roads_lines_filtered.geojson');
+const rl = readline.createInterface({ input: fs.createReadStream('data/raw/raw_roads.geojson'), terminal: false });
+const out = fs.createWriteStream('data/cleaned/roads_lines_filtered.geojson');
 out.write('{"type":"FeatureCollection","features":[\n');
 let first = true;
 const coordRegex = /\[\s*1([1-3]\.[0-9]+|4\.[0-4][0-9]*)\s*,\s*1([0-2]\.[0-9]+|3\.[0-5][0-9]*)\s*\]/;

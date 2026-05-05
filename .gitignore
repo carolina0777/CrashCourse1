@@ -4,3 +4,5 @@ dist/
 
 # Ensure all data and scripts are tracked (as requested)
 # (Removing common exclusions for .xlsx, .geojson, .py)
+data/raw/
+archive/deploy_temp/
