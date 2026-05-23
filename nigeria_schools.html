@@ -6,202 +6,221 @@
     <title>Geospatial Decision-Support Tool for Education Access - Borno State</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        body { margin: 0; padding: 0; display: flex; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a252f; }
+        body { margin: 0; padding: 0; display: flex; font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #f8fafc; }
         #sidebar { 
-            width: 340px; 
+            width: 380px; 
             height: 100vh; 
-            background: #2c3e50; 
-            color: white; 
-            padding: 30px 20px; 
+            background: #1e293b; 
+            color: #f8fafc; 
+            padding: 0; 
             box-sizing: border-box; 
             overflow-y: auto; 
             z-index: 1000; 
-            box-shadow: 4px 0 15px rgba(0,0,0,0.4); 
+            box-shadow: 10px 0 30px rgba(0,0,0,0.3); 
             display: flex;
             flex-direction: column;
+            border-right: 1px solid #334155;
         }
-        #map { flex: 1; height: 100vh; background: #ecf0f1; position: relative; }
+        #map { flex: 1; height: 100vh; background: #0f172a; position: relative; }
         
-        #insight-panel {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            width: 280px;
-            background: rgba(44, 62, 80, 0.95);
-            color: white;
-            padding: 20px;
-            border-radius: 12px;
-            z-index: 1001;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(8px);
-            pointer-events: none;
-        }
-        #insight-panel h3 { margin: 0 0 10px 0; font-size: 0.9rem; color: #3498db; text-transform: uppercase; letter-spacing: 1px; }
-        #insight-panel p { margin: 0; font-size: 0.85rem; line-height: 1.5; color: #ecf0f1; }
-        .highlight { color: #f1c40f; font-weight: bold; font-size: 1.1rem; }
+        .sidebar-content { padding: 30px 24px; }
 
         .sidebar-header { margin-bottom: 30px; }
-        .sidebar-header h1 { font-size: 1.1rem; line-height: 1.4; margin: 0; color: #3498db; }
-        .sidebar-header p { font-size: 0.8rem; color: #bdc3c7; margin: 8px 0 0 0; }
+        .sidebar-header h1 { font-size: 1.25rem; font-weight: 800; line-height: 1.2; margin: 0; color: #38bdf8; letter-spacing: -0.025em; }
+        .sidebar-header p { font-size: 0.875rem; color: #94a3b8; margin: 10px 0 0 0; font-weight: 500; }
 
-        .sidebar-section { margin-bottom: 35px; }
+        .sidebar-section { margin-bottom: 40px; }
         .sidebar-section h2 { 
-            font-size: 0.9rem; 
+            font-size: 0.75rem; 
             text-transform: uppercase; 
-            letter-spacing: 1.5px;
-            border-bottom: 1px solid #3e5871; 
-            padding-bottom: 8px; 
-            margin-bottom: 15px;
-            color: #95a5a6;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid #334155; 
+            padding-bottom: 10px; 
+            margin-bottom: 20px;
+            color: #64748b;
+            font-weight: 700;
         }
+
+        /* Insight Card Styling */
+        .insight-card {
+            background: #0f172a;
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid #334155;
+            margin-bottom: 25px;
+        }
+        .insight-card h3 { 
+            margin: 0 0 12px 0; 
+            font-size: 0.75rem; 
+            color: #38bdf8; 
+            text-transform: uppercase; 
+            letter-spacing: 0.05em; 
+        }
+        .insight-card p { 
+            margin: 0; 
+            font-size: 0.935rem; 
+            line-height: 1.6; 
+            color: #cbd5e1; 
+        }
+        .highlight { color: #fbbf24; font-weight: 700; font-size: 1.25rem; }
         
+        /* Control Buttons */
+        .control-grid { display: grid; gap: 10px; }
         .control-btn {
             width: 100%;
-            background: #34495e;
-            border: none;
-            color: #bdc3c7;
-            padding: 14px 18px;
-            margin-bottom: 12px;
+            background: #334155;
+            border: 1px solid #475569;
+            color: #94a3b8;
+            padding: 14px 16px;
             text-align: left;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             font-weight: 600;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            transition: all 0.2s ease;
-            border-left: 4px solid transparent;
-            font-size: 0.95rem;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            font-size: 0.9rem;
         }
         .control-btn:hover {
-            background: #3e5871;
-            color: white;
-            transform: translateX(5px);
+            background: #475569;
+            color: #f8fafc;
+            border-color: #64748b;
         }
         .control-btn.active {
-            background: #3498db;
-            color: white;
-            border-left: 4px solid #f1c40f;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            background: #38bdf8;
+            color: #0f172a;
+            border-color: #7dd3fc;
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
         }
         .status-pill {
-            font-size: 0.65rem;
-            padding: 2px 8px;
-            border-radius: 10px;
-            background: #e74c3c;
-            color: white;
-            text-transform: uppercase;
+            font-size: 0.625rem;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: #1e293b;
+            color: #94a3b8;
+            font-weight: 800;
         }
         .active .status-pill {
-            background: #2ecc71;
+            background: #0f172a;
+            color: #38bdf8;
         }
         
+        /* Legend Styling */
         .legend { 
-            background: rgba(0, 0, 0, 0.25); 
+            background: #0f172a; 
             padding: 20px; 
-            border-radius: 10px; 
-            font-size: 0.85rem; 
-            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px; 
+            font-size: 0.8125rem; 
+            border: 1px solid #334155;
         }
-        .legend-item { display: flex; align-items: center; margin-bottom: 12px; }
+        .legend-item { display: flex; align-items: center; margin-bottom: 14px; color: #94a3b8; }
+        .legend-item:last-child { margin-bottom: 0; }
         .legend-color { 
-            width: 12px; 
-            height: 12px; 
+            width: 10px; 
+            height: 10px; 
             border-radius: 50%; 
             margin-right: 12px; 
-            border: 1.5px solid white; 
+            border: 2px solid rgba(255,255,255,0.2); 
         }
         .legend-line { 
-            width: 20px; 
+            width: 18px; 
             height: 2px; 
             margin-right: 12px; 
             border-radius: 1px;
         }
         .legend-gradient { 
             width: 100%; 
-            height: 10px; 
-            margin-top: 10px; 
-            border-radius: 5px; 
+            height: 8px; 
+            margin-top: 12px; 
+            border-radius: 4px; 
             background: linear-gradient(to right, #edf8fb, #8c96c6, #810f7c);
         }
+
+        /* Custom Popup Styling */
+        .leaflet-popup-content-wrapper { background: #1e293b; color: #f8fafc; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.4); }
+        .leaflet-popup-tip { background: #1e293b; }
+        .leaflet-popup-content { margin: 15px; font-size: 0.875rem; line-height: 1.5; }
     </style>
 </head>
 <body>
     <div id="sidebar">
-        <div class="sidebar-header">
-            <h1>Geospatial Decision-Support Tool for Education Access</h1>
-            <p>North-Eastern Borno State Analysis</p>
-        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <h1>EduScope Borno</h1>
+                <p>Decision-Support System for Education Access</p>
+            </div>
 
-        <div class="sidebar-section">
-            <h2>Layer Visibility</h2>
-            <button class="control-btn" id="btn-population">
-                Population Density <span class="status-pill">OFF</span>
-            </button>
-            <button class="control-btn" id="btn-schools">
-                Educational Facilities <span class="status-pill">OFF</span>
-            </button>
-            <button class="control-btn" id="btn-roads">
-                Infrastructure / Roads <span class="status-pill">OFF</span>
-            </button>
-            <button class="control-btn" id="btn-conflict">
-                Conflict Monitoring (Vetted) <span class="status-pill">OFF</span>
-            </button>
-            <button class="control-btn" id="btn-gdelt">
-                Live Conflict Alerts (GDELT) <span class="status-pill">OFF</span>
-            </button>
-        </div>
+            <div class="sidebar-section">
+                <h2>Key Findings</h2>
+                <div class="insight-card">
+                    <h3>Accessibility Risk</h3>
+                    <p>Analysis reveals that <span class="highlight">75%</span> of schools in this region are within 5km of a historical conflict event.</p>
+                </div>
+                <div class="insight-card" style="margin-bottom: 0;">
+                    <h3>Safety Monitoring</h3>
+                    <p>Live alerts provide <span class="highlight">30m</span> updates on emerging threats to school road networks.</p>
+                </div>
+            </div>
 
-        <div class="sidebar-section">
-            <h2>Reference Legend</h2>
-            <div class="legend">
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #2ecc71;"></div> 
-                    Primary / Pre-Primary
+            <div class="sidebar-section">
+                <h2>Layers & Controls</h2>
+                <div class="control-grid">
+                    <button class="control-btn" id="btn-population">
+                        Population Density <span class="status-pill">OFF</span>
+                    </button>
+                    <button class="control-btn" id="btn-schools">
+                        Educational Facilities <span class="status-pill">OFF</span>
+                    </button>
+                    <button class="control-btn" id="btn-roads">
+                        Infrastructure / Roads <span class="status-pill">OFF</span>
+                    </button>
+                    <button class="control-btn" id="btn-conflict">
+                        Conflict (Historical) <span class="status-pill">OFF</span>
+                    </button>
+                    <button class="control-btn" id="btn-gdelt">
+                        Live Safety Alerts <span class="status-pill">OFF</span>
+                    </button>
                 </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #e67e22;"></div> 
-                    Secondary Schools
-                </div>
-                <div class="legend-item">
-                    <div class="legend-line" style="background: #bdc3c7; opacity: 0.6;"></div> 
-                    Access Roads (Highlights on click)
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #e74c3c; border: 2.5px solid #c0392b; width: 14px; height: 14px;"></div> 
-                    Conflict Incidents (ACLED)
-                </div>
-                <div class="legend-item">
-                    <div class="legend-color" style="background: #f1c40f; border: 2px solid #d4ac0d; width: 12px; height: 12px;"></div> 
-                    Live News Alerts (GDELT)
-                </div>
-                <div class="legend-item">
-                    <div class="legend-line" style="border: 1px dashed #3498db; background: none; width: 20px;"></div> 
-                    Study Area Perimeter
-                </div>
-                
-                <div style="margin-top: 15px; font-size: 0.75rem; color: #bdc3c7; font-style: italic; line-height: 1.3;">
-                    * Live map alerts are updated every 30 minutes via the GDELT Global Knowledge Graph.
-                </div>
-                
-                <div style="margin-top: 20px;">
-                    <div style="margin-bottom: 5px; font-weight: bold; color: #7f8c8d; font-size: 0.75rem;">POPULATION INTENSITY</div>
-                    <div class="legend-gradient"></div>
-                    <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #7f8c8d; margin-top: 6px;">
-                        <span>LOW</span>
-                        <span>HIGH</span>
+            </div>
+
+            <div class="sidebar-section">
+                <h2>Legend</h2>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #2ecc71;"></div> 
+                        Primary / Pre-Primary
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #e67e22;"></div> 
+                        Secondary Schools
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-line" style="background: #94a3b8; opacity: 0.6;"></div> 
+                        Access Roads
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #ef4444; border: 2px solid #b91c1c;"></div> 
+                        Conflict Incidents
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background: #fbbf24; border: 2px solid #d97706;"></div> 
+                        Live Alerts
+                    </div>
+                    
+                    <div style="margin-top: 20px;">
+                        <div style="margin-bottom: 5px; font-weight: 700; color: #64748b; font-size: 0.65rem; text-transform: uppercase;">Population Intensity</div>
+                        <div class="legend-gradient"></div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.65rem; color: #64748b; margin-top: 8px; font-weight: 600;">
+                            <span>LOW</span>
+                            <span>HIGH</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="map">
-        <div id="insight-panel">
-            <h3>Accessibility Insight</h3>
-            <p>Analysis reveals that <span class="highlight">75%</span> of schools in this region are within 5km of a historical conflict event, highlighting the critical need for safe access monitoring.</p>
-        </div>
-    </div>
+    <div id="map"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
