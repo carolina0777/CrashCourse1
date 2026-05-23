@@ -34,13 +34,14 @@ The map integrates multiple geospatial datasets to provide a comprehensive view 
 *   **Description:** Heatmap visualization of populated places to identify high-need areas and population centers.
 *   **Visuals:** Multi-color intensity gradient (Heatmap).
 
-## 🛠 Tools & Scripts
-- **Leaflet.js:** Primary open-source library for interactive mapping.
-- **Leaflet.heat:** Plugin for generating population density heatmaps.
-- **PapaParse:** Robust CSV parser for handling conflict data.
-- **Node.js Scripts:** 
-    - `filter_geojson.cjs`: Filters national GeoJSON datasets by geographic bounding box.
-    - `filter_conflict_csv.cjs`: Filters large-scale conflict datasets for the specific study area.
+## 🛠 Tools & Repository Structure
+- **[scripts/](scripts/):** Contains Node.js utilities for data processing:
+    - `filter_geojson.cjs`: Filters national datasets by geographic bounding box.
+    - `filter_conflict_csv.cjs`: Specialized tool for UCDP/ACLED CSV processing.
+- **[data/](data/):** Organized geospatial datasets:
+    - [raw/](data/raw/): Original source files (Conflict events).
+    - Cleaned GeoJSON layers for schools, roads, and population.
+- **Mapping:** Built with Leaflet.js and Leaflet.heat.
 
 ---
 *Note: This repository focuses on the intersection of educational infrastructure and regional security in Northern Nigeria.*

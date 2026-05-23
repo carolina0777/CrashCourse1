@@ -20,8 +20,27 @@
             display: flex;
             flex-direction: column;
         }
-        #map { flex: 1; height: 100vh; background: #ecf0f1; }
+        #map { flex: 1; height: 100vh; background: #ecf0f1; position: relative; }
         
+        #insight-panel {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 280px;
+            background: rgba(44, 62, 80, 0.95);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            z-index: 1001;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(8px);
+            pointer-events: none;
+        }
+        #insight-panel h3 { margin: 0 0 10px 0; font-size: 0.9rem; color: #3498db; text-transform: uppercase; letter-spacing: 1px; }
+        #insight-panel p { margin: 0; font-size: 0.85rem; line-height: 1.5; color: #ecf0f1; }
+        .highlight { color: #f1c40f; font-weight: bold; font-size: 1.1rem; }
+
         .sidebar-header { margin-bottom: 30px; }
         .sidebar-header h1 { font-size: 1.1rem; line-height: 1.4; margin: 0; color: #3498db; }
         .sidebar-header p { font-size: 0.8rem; color: #bdc3c7; margin: 8px 0 0 0; }
@@ -177,14 +196,19 @@
             </div>
         </div>
     </div>
-    <div id="map"></div>
+    <div id="map">
+        <div id="insight-panel">
+            <h3>Accessibility Insight</h3>
+            <p>Analysis reveals that <span class="highlight">75%</span> of schools in this region are within 5km of a historical conflict event, highlighting the critical need for safe access monitoring.</p>
+        </div>
+    </div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
     <script>
-        // Initialize Map (Start with a broader view of Nigeria)
-        const map = L.map('map', { zoomControl: false }).setView([11.5, 13.0], 7);
+        // Initialize Map (Zoomed to study area by default)
+        const map = L.map('map', { zoomControl: false }).setView([13.15, 13.7], 9);
         L.control.zoom({ position: 'topright' }).addTo(map);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -192,7 +216,7 @@
             opacity: 0.8
         }).addTo(map);
 
-        // Define Study Area Perimeter (Aligned closer to Nigerian border)
+        // Define Study Area Perimeter
         const perimeterCoords = [[12.5, 13.0], [13.8, 14.4]];
         const studyArea = L.rectangle(perimeterCoords, {
             color: "#3498db",
@@ -201,46 +225,28 @@
             dashArray: "5, 10"
         }).addTo(map);
 
-        // Layer Groups (Initial state: NOT added to map)
-        const heatGroup = L.layerGroup();
+        // Layer Groups
+        const heatGroup = L.layerGroup().addTo(map); // Default ON
         const roadsGroup = L.layerGroup();
-        const primaryGroup = L.layerGroup();
-        const secondaryGroup = L.layerGroup();
+        const primaryGroup = L.layerGroup().addTo(map); // Default ON
+        const secondaryGroup = L.layerGroup().addTo(map); // Default ON
         const conflictGroup = L.layerGroup();
         const gdeltGroup = L.layerGroup();
 
-        let roadsLayer; // Reference for dynamic styling
-
-        // Ensure layers are NOT on map (Redundant but safe)
-        map.removeLayer(heatGroup);
-        map.removeLayer(roadsGroup);
-        map.removeLayer(primaryGroup);
-        map.removeLayer(secondaryGroup);
-        map.removeLayer(conflictGroup);
-        map.removeLayer(gdeltGroup);
-
-        // Reset road styling when clicking on the map (empty area)
-        map.on('click', (e) => {
-            if (roadsLayer) {
-                roadsLayer.setStyle({ color: "#bdc3c7", weight: 0.6, opacity: 0.2 });
-            }
-        });
+        let roadsLayer; 
 
         // Button Control Logic
-        function setupButton(id, layers) {
+        function setupButton(id, layers, defaultOn = false) {
             const btn = document.getElementById(id);
-            // Ensure button doesn't have active class initially
-            btn.classList.remove('active');
+            if (defaultOn) {
+                btn.classList.add('active');
+                btn.querySelector('.status-pill').innerText = 'ON';
+            }
             
             btn.addEventListener('click', () => {
                 const isActive = btn.classList.toggle('active');
                 btn.querySelector('.status-pill').innerText = isActive ? 'ON' : 'OFF';
                 
-                if (isActive) {
-                    // Zoom to study area when a filter is turned ON
-                    map.fitBounds(studyArea.getBounds(), { padding: [30, 30], animate: true });
-                }
-
                 layers.forEach(layer => {
                     if (isActive) map.addLayer(layer);
                     else map.removeLayer(layer);
@@ -248,14 +254,14 @@
             });
         }
 
-        setupButton('btn-population', [heatGroup]);
-        setupButton('btn-schools', [primaryGroup, secondaryGroup]);
+        setupButton('btn-population', [heatGroup], true);
+        setupButton('btn-schools', [primaryGroup, secondaryGroup], true);
         setupButton('btn-roads', [roadsGroup]);
         setupButton('btn-conflict', [conflictGroup]);
         setupButton('btn-gdelt', [gdeltGroup]);
 
         // 1. Schools (Filtered to Northern Tip)
-        fetch('data/cleaned/schools_northern_tip.geojson')
+        fetch('data/schools_northern_tip.geojson')
             .then(res => res.json())
             .then(data => {
                 L.geoJSON(data, {
@@ -290,7 +296,7 @@
             });
 
         // 2. Road Network (Contextual Light Grey - Faint by default)
-        fetch('data/cleaned/roads_northern_tip.geojson')
+        fetch('data/roads_northern_tip.geojson')
             .then(res => res.json())
             .then(data => {
                 roadsLayer = L.geoJSON(data, {
@@ -299,7 +305,7 @@
             });
 
         // 3. Population Heatmap (Background)
-        fetch('data/cleaned/populated_places_northern_tip.geojson')
+        fetch('data/populated_places_northern_tip.geojson')
             .then(res => res.json())
             .then(data => {
                 const heatPoints = data.features.map(f => [f.geometry.coordinates[1], f.geometry.coordinates[0], 0.5]);
