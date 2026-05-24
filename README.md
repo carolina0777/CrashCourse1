@@ -39,8 +39,9 @@ The map integrates multiple geospatial datasets to provide a comprehensive view 
     - `filter_geojson.cjs`: Filters national datasets by geographic bounding box.
     - `filter_conflict_csv.cjs`: Specialized tool for UCDP/ACLED CSV processing.
 - **[data/](data/):** Organized geospatial datasets:
-    - [raw/](data/raw/): Original source files (Conflict events).
-    - Cleaned GeoJSON layers for schools, roads, and population.
+    - [raw/](data/raw/): Original source files (Conflict events, schools, and settlements). 
+        - *Note: The raw road dataset (hotosm_nga_roads_lines_geojson.geojson) is approximately 1.2GB, which exceeds GitHub's 100MB file size limit. This specific raw file is stored locally in the project environment, while the cleaned/filtered versions are available in the repository.*
+    - [cleaned or filtered data/](data/cleaned%20or%20filtered%20data/): Cleaned GeoJSON layers for schools, roads, and population used by the map.
 - **Mapping:** Built with Leaflet.js and Leaflet.heat.
 
 ---
