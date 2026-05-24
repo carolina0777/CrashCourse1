@@ -10,10 +10,12 @@ EBI’s current planning and prioritisation relies heavily on field team experti
 Building on this, the next step is to go beyond supply-demand mapping and incorporate access as a key dimension. In conflict-affected settings, it is not enough to know where schools are located if they are not safely reachable. Integrating road networks and conflict data allows for a more complete understanding of accessibility, including how routes and access conditions change over time.
 
 ## Evidence from the Field: The Borno State Pilot
-Initial analysis using the EduScope artifact in North-Eastern Borno State, Nigeria, has yielded critical insights that underscore the urgency of this tool:
-*   **High Risk Exposure:** Of the **106 schools** mapped in the study area, **75% (80 facilities)** are located within just **5km of a historical conflict site**.
-*   **Intensity of Violence:** The pilot area recorded over **516 vetted conflict events** resulting in more than **6,500 fatalities** since 2020, illustrating the volatile environment students and staff must navigate.
-*   **Infrastructure Gaps:** Overlaying road networks reveals that many schools rely on single access points that frequently intersect with high-conflict corridors, making them vulnerable to isolation.
+The **EduScope Borno** artifact has transformed raw geospatial data into a narrative of accessibility and risk. Initial analysis of the North-Eastern Borno State pilot has yielded critical findings:
+
+*   **Extreme Risk Exposure:** Analysis confirms that **75% of schools** (80 out of 106 facilities) are located within a high-risk **5km radius** of a vetted conflict event.
+*   **Significant Infrastructure Gaps:** The study area encompasses **2,103 settlements**, yet school distribution is critically uneven. The northern tip faces a **3x coverage gap**, with only 1 school serving every 50 settlements (compared to 1 per 18 in the south).
+*   **Intensity of Violence:** The pilot area has recorded over **516 conflict events** and **6,500+ fatalities** since 2020, illustrating the volatile environment students must navigate.
+*   **Isolation Vulnerability:** By selecting individual facilities in the tool, EBI can see that many schools rely on just **1 or 2 access roads** that intersect directly with high-frequency conflict corridors.
 
 ## Approach
 The system combines real-time field inputs, geospatial analysis, and AI-generated insights into a single decision-support workflow. Moving from static mapping to dynamic access analysis enables EBI to understand not only where schools are located, but whether and how they remain reachable for children as conflict dynamics evolve.
@@ -25,17 +27,22 @@ The system combines real-time field inputs, geospatial analysis, and AI-generate
 4. **AI-supported knowledge layer:** Structuring qualitative information from past reports to identify recurring patterns.
 5. **Bootcamp for field workers:** Training to ensure adoption and integration into daily workflows.
 
-## The Solution in Detail
-The tool includes conflict history as well as live updates (30 mins) on ongoing conflict events via GDELT integration. By combining historical data with real-time news alerts, EBI can identify which routes are potentially blocked and identify alternative paths to education facilities.
+## The Solution in Detail: Dynamic Accessibility Monitoring
+The EduScope tool moves beyond "dots on a map" to provide an active analysis environment. When a school is selected, the tool dynamically highlights the **local road network** and calculates **localized risk metrics** (nearby conflicts vs. available routes).
 
-**Artifact Link:** [Geospatial Decision-Support Tool - Borno State](https://carolina0777.github.io/CrashCourse1/nigeria_schools.html)
+The tool integrates:
+*   **Historical Depth:** Years of vetted security data to identify long-term patterns.
+*   **Real-Time Awareness:** **Live Safety Alerts** updated every 30 minutes via GDELT integration to monitor emerging threats.
+*   **Contextual Background:** Population density heatmaps to prioritize interventions where child populations are highest.
+
+**Artifact Link:** [EduScope Borno State - Interactive Tool](https://carolina0777.github.io/CrashCourse1/nigeria_schools.html)
 
 ## Risks and Limitations
 While EduScope significantly enhances situational awareness, several constraints must be managed:
-*   **Data Latency:** There is an inherent lag between an incident occurring and its verification in vetted datasets (ACLED/UCDP). This is mitigated by the inclusion of the GDELT Live Alerts layer.
-*   **Connectivity Barriers:** The field alert mechanism requires mobile network access. In areas of complete blackout, reports are cached locally but cannot be visualized at HQ until a connection is restored.
-*   **Reporting Bias:** Data density is often higher near urban centers. Remote rural areas may appear "safer" simply due to a lack of media coverage or field presence.
-*   **Dynamic Population Movement:** Population datasets like GRID3 are periodically updated but may not reflect sudden displacements (IDP movements) occurring in real-time during a major offensive.
+*   **Data Latency:** Lag in vetted security datasets (ACLED/UCDP) is mitigated by the 30-minute GDELT live news layer.
+*   **Connectivity Barriers:** The field alert mechanism caches reports locally in "blackout" zones until network access is restored.
+*   **Reporting Bias:** Remote rural areas may show fewer events due to lack of media coverage; field team input is vital to verify "quiet" zones.
+*   **Dynamic Population Movement:** IDP movements can shift demand faster than annual population census updates.
 
 ## Deliverables
 *   **Deliverable 1:** Single-entry interface platform combining geospatial data and AI-generated prioritisation signals.
