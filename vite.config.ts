@@ -9,7 +9,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        nigeria_schools: resolve(__dirname, 'nigeria_schools.html'),
+        main: resolve(__dirname, 'index.html'),
       },
     },
   },
